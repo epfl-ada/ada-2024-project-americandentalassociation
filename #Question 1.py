@@ -16,6 +16,10 @@ import matplotlib.pyplot as plt
 data = pd.read_csv("data/filtered_movie_data.csv")
 df = pd.DataFrame(data)
 
+
+'''
+Count of different genres released; change, relative change, proportion, clustering for relative change
+'''
 # Function to count genres for a specific year and return total movies
 def count_genres_by_year(dataframe, year):
     filtered_df = dataframe[dataframe['Year'] == year].copy()
@@ -56,34 +60,41 @@ def calc_relative_growth(counts_year1, counts_year2, year1, year2, total_movies_
     return merged_counts.sort_values(by='Proportion_Difference', ascending=False).reset_index(drop=True)
 
 # Clustering function to categorize genres by growth patterns
-def cluster_genres_by_growth(merged_counts):
-    # Check that necessary columns are present and fill NaNs
-    clustering_data = merged_counts[[f'Proportion_{year1}', f'Proportion_{year2}', 'Proportion_Difference']].fillna(0)
+def cluster_genres_by_relative_change(merged_counts, n_clusters=5):
+    # Replace infinite values in 'Percentage_Increase' with a large finite value for clustering purposes
+    merged_counts['Percentage_Increase'] = merged_counts['Percentage_Increase'].replace([np.inf, -np.inf], 1000)
+
+    # Use 'Percentage_Increase' for clustering
+    clustering_data = merged_counts[['Percentage_Increase']].fillna(0)
     
     # Perform KMeans clustering
-    kmeans = KMeans(n_clusters=3, random_state=42)
-    merged_counts['Cluster'] = kmeans.fit_predict(clustering_data)
-    
-    return merged_counts[['Genre', f'Proportion_{year1}', f'Proportion_{year2}', 'Proportion_Difference', 'Cluster']]
-
-def plot_clusters(merged_counts, year1, year2, n_clusters=5):
-    # Perform clustering with n_clusters
-    clustering_data = merged_counts[[f'Proportion_{year1}', f'Proportion_{year2}', 'Proportion_Difference']].fillna(0)
     kmeans = KMeans(n_clusters=n_clusters, random_state=42)
     merged_counts['Cluster'] = kmeans.fit_predict(clustering_data)
     
-    # Scatter plot of Proportion changes colored by cluster
+    return merged_counts[['Genre', 'Percentage_Increase', 'Cluster']]
+
+# Visualization for Clustering based on Percentage Increase
+def plot_clusters_relative_change(merged_counts, n_clusters=5):
+    # Run the clustering based on relative change
+    clustered_data = cluster_genres_by_relative_change(merged_counts, n_clusters)
+    
+    # Plot the clusters
     plt.figure(figsize=(10, 8))
-    scatter = plt.scatter(merged_counts[f'Proportion_{year1}'], merged_counts[f'Proportion_{year2}'], 
-                          c=merged_counts['Cluster'], cmap='viridis', s=50, alpha=0.7)
+    scatter = plt.scatter(clustered_data['Percentage_Increase'], clustered_data['Genre'], 
+                          c=clustered_data['Cluster'], cmap='viridis', s=50, alpha=0.7)
     plt.colorbar(scatter, label='Cluster')
-    plt.xlabel(f'Proportion in {year1}')
-    plt.ylabel(f'Proportion in {year2}')
-    plt.title(f'Genre Clusters Based on Proportion Change ({year1} to {year2})')
+    plt.xlabel('Percentage Increase')
+    plt.ylabel('Genre')
+    plt.title(f'Genre Clusters Based on Relative Change ({year1} to {year2})')
     plt.show()
 
+def get_genres_in_cluster(clustered_data, cluster_label):
+    # Filter the DataFrame for the specified cluster
+    genres_in_cluster = clustered_data[clustered_data['Cluster'] == cluster_label]
+    return genres_in_cluster[['Genre', 'Percentage_Increase']]
+
 # Analysis for the start of Iraq War period (2003)
-year1, year2 = 2002, 2003
+year1, year2 = 1980, 1990
 counts_year1, total_movies_year1 = count_genres_by_year(df, year1)
 counts_year2, total_movies_year2 = count_genres_by_year(df, year2)
 
@@ -97,7 +108,18 @@ print(calc_genre_growth(counts_year1, counts_year2, year1, year2).head(10))
 relative_growth = calc_relative_growth(counts_year1, counts_year2, year1, year2, total_movies_year1, total_movies_year2)
 print("Relative Growth:")
 print(relative_growth)
-print("Clustering by Growth Patterns:")
-clustered_genres = cluster_genres_by_growth(relative_growth)
-print(clustered_genres)
-plot_clusters(relative_growth, year1, year2, n_clusters=5)
+# Example usage
+# Assuming you have counts_year1 and counts_year2 already calculated
+# counts_year1, counts_year2 = count_genres_by_year(df, year1), count_genres_by_year(df, year2)
+# Calculate genre growth
+relative_growth = calc_genre_growth(counts_year1, counts_year2, year1, year2)
+
+# Plot clusters with 5 clusters
+plot_clusters_relative_change(relative_growth, n_clusters=5)
+
+# Example usage to get genres in a specific cluster (e.g., Cluster 0)
+genres_in_cluster2 = get_genres_in_cluster(relative_growth, 2)
+genres_in_cluster3 = get_genres_in_cluster(relative_growth, 3)
+print(f"Genres in Cluster")
+print(genres_in_cluster2)
+print(genres_in_cluster3)
