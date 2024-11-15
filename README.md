@@ -43,11 +43,10 @@ Questions explored include whether global crises lead to shifts toward various g
 - Check how the produced genres evolve over time, and try to identify trends related to certain genres with historical events.
 - Filter the dataset based on the summary, observing the genres of movies talking about a certain country and the differences in the way they are depicted.
 
-#### Q3: Thematic and Sentiment Analysis
-- **Use Natural Language Processing (NLP)** to analyze themes, tones, and conflict portrayals in movies, focusing on variations by country.
-  - **Categorize Movies by Conflict**: Movies tagged as “War Movie” are filtered using keywords related to specific conflicts (e.g., WW2). This yields subsets for further analysis.
-  - **Sentiment and Emotion Analysis**: Use Emotion English DistillRoBERTa-base sentiment analysis on summaries, generating negative, neutral, and positive scores, allowing cross-country comparisons of portrayals.
-  - **Key Themes and Entities**: Named Entity Recognition (NER) extracts key entities (people, organizations, locations) for entity-level sentiment analysis. Results, visualized with heatmaps, reveal patterns in portraying heroes (positive) and villains (negative) across countries.
+#### Q3: Cross-National Opinions Comparisons
+- Focus on movies covering specific conflicts (e.g., WW2).
+- Conduct sentiment analysis on summaries, generating negative, neutral, and positive scores, allowing for cross-country comparisons.
+- Conduct Named Entity Recognition to extract key entities, such as main figures in movies, in order to analyze how sentiment towards figures varies depending on locations.
 
 #### Q4: Audience Preferences During Crises
 - Conduct the analysis by aligning global events such as wars, pandemics, and natural disasters to inspect both short-term and long-term shifts in audience preferences.
