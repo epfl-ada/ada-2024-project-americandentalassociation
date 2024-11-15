@@ -23,7 +23,7 @@ Questions explored include whether global crises lead to shifts toward various g
 - **Wikipedia Timeline of World Events**: Focuses on 20th and 21st-century crises, including wars, natural disasters, and pandemics, using a zero-shot classifier to categorize events. Positive events are excluded for research focus.
 - **Google Search Trends**: Provides insights into regional interest trends from 2004 onward, offering data for genre popularity analysis related to global crises.
 
-### Methods
+# Methods
 
 ## Data Preparation & Cleaning
 - Wikipedia Timeline was scraped directly from Wikipedia’s website. After cleaning, each entry contained data and a short description of an event. Event types were then added using a pre-trained NLI-based zero-shot text classifier (classes: war, catastrophe, political instability, political resolution, science, technological advancement, natural disaster, pandemics). Positive events were removed to better focus on defined research questions.  
@@ -33,28 +33,28 @@ Questions explored include whether global crises lead to shifts toward various g
 
 ## Research Question Analysis
 
-# Q1: Statistical Analysis of Film Trends
+### Q1: Statistical Analysis of Film Trends
 - Lead statistical analysis and perform visualizations for the number of movies released and the revenue, as well as values like absolute change and relative change, for chosen years. 
 - Explore specific genres over the years (“War Film”, “Superhero”, “Spy”) and inspect the spikes in production and revenue. 
 - Identify the methodology for year comparison (before the start of a war, start, middle, end, after - ideally, take into account some significant events or changes) and the events that have had significant influence on the movie industry.
 
-# Q2: Cross-National Genre Comparisons
+### Q2: Cross-National Genre Comparisons
 - Filter the movie dataset by countries and observe the differences in produced genres between different countries. 
 - Check how the produced genres evolve over time, and try to identify trends related to certain genres with historical events.
 - Filter the dataset based on the summary, observing the genres of movies talking about a certain country and the differences in the way they are depicted.
 
-# Q3: Cross-National Opinions Comparisons
+### Q3: Cross-National Opinions Comparisons
 - Focus on movies covering specific conflicts (e.g., WW2).
 - Conduct sentiment analysis on summaries, generating negative, neutral, and positive scores, allowing for cross-country comparisons.
 - Conduct Named Entity Recognition to extract key entities, such as main figures in movies, in order to analyze how sentiment towards figures varies depending on locations.
 
-# Q4: Audience Preferences During Crises
+### Q4: Audience Preferences During Crises
 - Conduct the analysis by aligning global events such as wars, pandemics, and natural disasters to inspect both short-term and long-term shifts in audience preferences.
 - Perform genre-specific trend analysis to identify immediate spikes in popularity as well as sustained changes over time.
 - Compare regional differences and potentially integrate NLP methods (e.g., zero-shot text classification) to classify movie thematics better.
 - Visualize the data to highlight both immediate and lasting impacts of global events on movie thematics.
 
-## Plans and Timeline
+### Plans and Timeline
 
 **Week 1: Refinement**  
 - Align on our strategy: decide whether to build on each other's analyses or pursue independent event selections.  
