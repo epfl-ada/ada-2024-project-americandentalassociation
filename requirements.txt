@@ -1,156 +1,211 @@
-anyio @ file:///C:/b/abs_847uobe7ea/croot/anyio_1706220224037/work
-argon2-cffi @ file:///opt/conda/conda-bld/argon2-cffi_1645000214183/work
-argon2-cffi-bindings @ file:///C:/ci_311/argon2-cffi-bindings_1676424443321/work
-arrow==1.3.0
-asttokens @ file:///opt/conda/conda-bld/asttokens_1646925590279/work
-async-lru @ file:///C:/b/abs_e0hjkvwwb5/croot/async-lru_1699554572212/work
-attrs @ file:///C:/b/abs_35n0jusce8/croot/attrs_1695717880170/work
-Babel @ file:///C:/ci_311/babel_1676427169844/work
-beautifulsoup4 @ file:///C:/b/abs_d5wytg_p0w/croot/beautifulsoup4-split_1718029833749/work
-bleach @ file:///opt/conda/conda-bld/bleach_1641577558959/work
-bokeh @ file:///C:/b/abs_0aes0rbxnz/croot/bokeh_1718119072183/work
-Bottleneck @ file:///C:/b/abs_f05kqh7yvj/croot/bottleneck_1707864273291/work
-Brotli @ file:///C:/b/abs_3d36mno480/croot/brotli-split_1714483178642/work
-certifi @ file:///C:/b/abs_1fw_exq1si/croot/certifi_1725551736618/work/certifi
-cffi @ file:///C:/b/abs_78eb1_vq6z/croot/cffi_1714483206096/work
-charset-normalizer @ file:///croot/charset-normalizer_1721748349566/work
-click @ file:///C:/b/abs_f9ihnt72pu/croot/click_1698129847492/work
-colorama @ file:///C:/ci_311/colorama_1676422310965/work
-comm @ file:///C:/b/abs_67a8058udb/croot/comm_1709322909844/work
-contourpy @ file:///C:/b/abs_853rfy8zse/croot/contourpy_1700583617587/work
-cycler @ file:///tmp/build/80754af9/cycler_1637851556182/work
-debugpy @ file:///C:/b/abs_c0y1fjipt2/croot/debugpy_1690906864587/work
-decorator @ file:///opt/conda/conda-bld/decorator_1643638310831/work
-defusedxml @ file:///tmp/build/80754af9/defusedxml_1615228127516/work
-entrypoints @ file:///C:/ci_311/entrypoints_1676423328987/work
-et-xmlfile==1.1.0
-executing @ file:///opt/conda/conda-bld/executing_1646925071911/work
-fastjsonschema @ file:///C:/ci_311/python-fastjsonschema_1679500568724/work
-filelock==3.16.1
-fonttools @ file:///C:/b/abs_f47gnfqnx0/croot/fonttools_1713551644747/work
-fqdn==1.5.1
-fsspec==2024.9.0
-h11 @ file:///C:/b/abs_1czwoyexjf/croot/h11_1706652332846/work
-httpcore @ file:///C:/b/abs_55n7g233bw/croot/httpcore_1706728507241/work
-httpx @ file:///C:/b/abs_43e135shby/croot/httpx_1723474830126/work
-huggingface-hub==0.25.1
-idna @ file:///C:/b/abs_aad84bnnw5/croot/idna_1714398896795/work
-ipykernel @ file:///C:/b/abs_c2u94kxcy6/croot/ipykernel_1705933907920/work
-ipympl @ file:///C:/b/abs_deij8p1rht/croot/ipympl_1698846795315/work
-ipython @ file:///C:/b/abs_7dmlwmkafn/croot/ipython_1718287997280/work
-ipython-genutils @ file:///tmp/build/80754af9/ipython_genutils_1606773439826/work
-ipywidgets @ file:///C:/b/abs_25rsd7yhd4/croot/ipywidgets_1709575117021/work
-isoduration==20.11.0
-jedi @ file:///C:/b/abs_1b8kmj7rrm/croot/jedi_1721058359741/work
-Jinja2 @ file:///C:/b/abs_92fccttino/croot/jinja2_1716993447201/work
-joblib @ file:///C:/b/abs_f4b98l6lgk/croot/joblib_1718217224240/work
-json5 @ file:///tmp/build/80754af9/json5_1624432770122/work
-jsonpointer==3.0.0
-jsonschema @ file:///C:/b/abs_d1c4sm8drk/croot/jsonschema_1699041668863/work
-jsonschema-specifications @ file:///C:/b/abs_0brvm6vryw/croot/jsonschema-specifications_1699032417323/work
-jupyter-events @ file:///C:/b/abs_c2m9s5b5m5/croot/jupyter_events_1718738115254/work
-jupyter-lsp @ file:///C:/b/abs_ecle3em9d4/croot/jupyter-lsp-meta_1699978291372/work
-jupyter_client @ file:///C:/ci_311/jupyter_client_1676424009414/work
-jupyter_contrib_core==0.4.2
-jupyter_core @ file:///C:/b/abs_beftpbuevw/croot/jupyter_core_1718818307097/work
-jupyter_nbextensions_configurator==0.6.4
-jupyter_server @ file:///C:/b/abs_9a333nh6yu/croot/jupyter_server_1718827092223/work
-jupyter_server_terminals @ file:///C:/b/abs_ec0dq4b50j/croot/jupyter_server_terminals_1686870763512/work
-jupyterlab @ file:///C:/b/abs_88qjk9lo2r/croot/jupyterlab_1725895228333/work
-jupyterlab-pygments @ file:///tmp/build/80754af9/jupyterlab_pygments_1601490720602/work
-jupyterlab-widgets @ file:///C:/b/abs_62picw9xos/croot/jupyterlab_widgets_1709323131962/work
-jupyterlab_server @ file:///C:/b/abs_fdi5r_tpjc/croot/jupyterlab_server_1725865372811/work
-kiwisolver @ file:///C:/ci_311/kiwisolver_1676431979301/work
-MarkupSafe @ file:///C:/b/abs_ecfdqh67b_/croot/markupsafe_1704206030535/work
-matplotlib==3.9.2
-matplotlib-inline @ file:///C:/ci_311/matplotlib-inline_1676425798036/work
-mistune @ file:///C:/ci_311/mistune_1676425111783/work
-mkl-service==2.4.0
-mkl_fft @ file:///C:/b/abs_f55mv94vyg/croot/mkl_fft_1725370278455/work
-mkl_random @ file:///C:/b/abs_21ydbzdu8d/croot/mkl_random_1725370276095/work
-mpmath==1.3.0
-mysqlclient==2.2.4
-nb-conda-kernels @ file:///C:/ci_311/nb_conda_kernels_1677744411473/work
-nbclassic @ file:///C:/b/abs_26jzwh3igq/croot/nbclassic_1717622600479/work
-nbclient @ file:///C:/b/abs_cal0q5fyju/croot/nbclient_1698934263135/work
-nbconvert @ file:///C:/b/abs_17p29f_rx4/croot/nbconvert_1699022793097/work
-nbformat @ file:///C:/b/abs_5a2nea1iu2/croot/nbformat_1694616866197/work
-nest-asyncio @ file:///C:/b/abs_65d6lblmoi/croot/nest-asyncio_1708532721305/work
-networkx==3.3
-nltk @ file:///C:/b/abs_3e10flry37/croot/nltk_1724427703710/work
-notebook @ file:///C:/b/abs_670k6uj879/croot/notebook_1717630765266/work
-notebook_shim @ file:///C:/b/abs_a5xysln3lb/croot/notebook-shim_1699455926920/work
-numexpr @ file:///C:/b/abs_5fucrty5dc/croot/numexpr_1696515448831/work
-numpy @ file:///C:/b/abs_c1ywpu18ar/croot/numpy_and_numpy_base_1708638681471/work/dist/numpy-1.26.4-cp311-cp311-win_amd64.whl#sha256=5dfd3e04dc1c2826d3f404fdc7f93c097901f5da9b91f4f394f79d4e038ed81d
-openpyxl @ file:///C:/b/abs_0e6ca21lac/croot/openpyxl_1721752965859/work
-overrides @ file:///C:/b/abs_cfh89c8yf4/croot/overrides_1699371165349/work
-packaging @ file:///C:/b/abs_c3vlh0z4jw/croot/packaging_1720101866539/work
-pandas @ file:///C:/b/abs_9aotnvvz16/croot/pandas_1718308978393/work/dist/pandas-2.2.2-cp311-cp311-win_amd64.whl#sha256=9eebcfbc7ae612209b886219f3be546c6b5d5ec8bb62ca107f5e66fde1fe8650
-pandocfilters @ file:///opt/conda/conda-bld/pandocfilters_1643405455980/work
-parso @ file:///opt/conda/conda-bld/parso_1641458642106/work
-patsy @ file:///C:/b/abs_21hy_wyj13/croot/patsy_1718378184379/work
-pillow @ file:///C:/b/abs_32o8er3uqp/croot/pillow_1721059447598/work
-platformdirs @ file:///C:/b/abs_b6z_yqw_ii/croot/platformdirs_1692205479426/work
-ply==3.11
-prometheus-client @ file:///C:/ci_311/prometheus_client_1679591942558/work
-prompt-toolkit @ file:///C:/b/abs_68uwr58ed1/croot/prompt-toolkit_1704404394082/work
-psutil @ file:///C:/ci_311_rebuilds/psutil_1679005906571/work
-pure-eval @ file:///opt/conda/conda-bld/pure_eval_1646925070566/work
-pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
-Pygments @ file:///C:/b/abs_fay9dpq4n_/croot/pygments_1684279990574/work
-pyparsing @ file:///C:/b/abs_520r19rysg/croot/pyparsing_1725041656021/work
-PyQt5==5.15.10
-PyQt5-sip @ file:///C:/b/abs_c0pi2mimq3/croot/pyqt-split_1698769125270/work/pyqt_sip
-PySocks @ file:///C:/ci_311/pysocks_1676425991111/work
-python-dateutil @ file:///C:/b/abs_3au_koqnbs/croot/python-dateutil_1716495777160/work
-python-dotenv @ file:///home/conda/feedstock_root/build_artifacts/python-dotenv-split_1706018097647/work
-python-json-logger @ file:///C:/b/abs_cblnsm6puj/croot/python-json-logger_1683824130469/work
-pytz @ file:///C:/b/abs_6ap4tsz1ox/croot/pytz_1713974360290/work
-pywin32==305.1
-pywinpty @ file:///C:/ci_311/pywinpty_1677707791185/work/target/wheels/pywinpty-2.0.10-cp311-none-win_amd64.whl
-PyYAML @ file:///C:/b/abs_782o3mbw7z/croot/pyyaml_1698096085010/work
-pyzmq @ file:///C:/b/abs_40g8k86mr7/croot/pyzmq_1709318380178/work
-referencing @ file:///C:/b/abs_09f4hj6adf/croot/referencing_1699012097448/work
-regex @ file:///C:/b/abs_5cm86yjgo3/croot/regex_1726670543261/work
-requests @ file:///C:/b/abs_9frifg92q2/croot/requests_1721410901096/work
-rfc3339-validator @ file:///C:/b/abs_ddfmseb_vm/croot/rfc3339-validator_1683077054906/work
-rfc3986-validator @ file:///C:/b/abs_6e9azihr8o/croot/rfc3986-validator_1683059049737/work
-rpds-py @ file:///C:/b/abs_76j4g4la23/croot/rpds-py_1698947348047/work
-safetensors==0.4.5
-scikit-learn @ file:///C:/b/abs_aajc9f7v6r/croot/scikit-learn_1722067652693/work/dist/scikit_learn-1.5.1-cp311-cp311-win_amd64.whl#sha256=ef2d538ee0b3967ea4792c5e8d4d425e1408915ee175545cd14c35a63566ee17
-scipy @ file:///C:/b/abs_efv75hqhju/croot/scipy_1717521501389/work/dist/scipy-1.13.1-cp311-cp311-win_amd64.whl#sha256=76691b2bf520c036f20250927bb9e0bd003313ca5367b359c166eb1ece7225e5
-seaborn @ file:///C:/b/abs_ca2mi1rgmn/croot/seaborn_1718303534355/work
-Send2Trash @ file:///C:/b/abs_08dh49ew26/croot/send2trash_1699371173324/work
-sip @ file:///C:/b/abs_edevan3fce/croot/sip_1698675983372/work
-six @ file:///tmp/build/80754af9/six_1644875935023/work
-sniffio @ file:///C:/b/abs_3akdewudo_/croot/sniffio_1705431337396/work
-soupsieve @ file:///C:/b/abs_bbsvy9t4pl/croot/soupsieve_1696347611357/work
-stack-data @ file:///opt/conda/conda-bld/stack_data_1646927590127/work
-statsmodels @ file:///C:/b/abs_54b33xdukx/croot/statsmodels_1718381209933/work
-svgling==0.5.0
-svgwrite==1.4.3
-sympy==1.13.3
-terminado @ file:///C:/ci_311/terminado_1678228513830/work
-threadpoolctl @ file:///C:/b/abs_def0dwqlft/croot/threadpoolctl_1719407816649/work
-tiktoken==0.8.0
-tinycss2 @ file:///C:/ci_311/tinycss2_1676425376744/work
-tokenizers==0.20.0
-torch==2.4.1
-tornado @ file:///C:/b/abs_7bua0304mj/croot/tornado_1718740122405/work
-tqdm @ file:///C:/b/abs_77wju137gk/croot/tqdm_1724853945787/work
-traitlets @ file:///C:/b/abs_bfsnoxl4pq/croot/traitlets_1718227069245/work
-transformers==4.45.1
-types-python-dateutil==2.9.0.20240906
-typing_extensions @ file:///C:/b/abs_0as9mdbkfl/croot/typing_extensions_1715268906610/work
-tzdata @ file:///croot/python-tzdata_1690578112552/work
-unicodedata2 @ file:///C:/b/abs_b6apldlg7y/croot/unicodedata2_1713212998255/work
-uri-template==1.3.0
-urllib3 @ file:///C:/b/abs_a7hvzm4y95/croot/urllib3_1718912661242/work
-wcwidth @ file:///Users/ktietz/demo/mc3/conda-bld/wcwidth_1629357192024/work
-webcolors==24.8.0
-webencodings==0.5.1
-websocket-client @ file:///C:/b/abs_5dmnxxoci9/croot/websocket-client_1715878351319/work
-widgetsnbextension @ file:///C:/b/abs_a84ycxud7_/croot/widgetsnbextension_1709322945280/work
-win-inet-pton @ file:///C:/ci_311/win_inet_pton_1676425458225/work
-xlrd @ file:///croot/xlrd_1685030938141/work
-xyzservices @ file:///C:/ci_311/xyzservices_1676434829315/work
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: win-64
+anyio=4.2.0=py311haa95532_0
+argon2-cffi=21.3.0=pyhd3eb1b0_0
+argon2-cffi-bindings=21.2.0=py311h2bbff1b_0
+arrow=1.3.0=pypi_0
+asttokens=2.0.5=pyhd3eb1b0_0
+async-lru=2.0.4=py311haa95532_0
+attrs=23.1.0=py311haa95532_0
+babel=2.11.0=py311haa95532_0
+beautifulsoup4=4.12.3=py311haa95532_0
+blas=1.0=mkl
+bleach=4.1.0=pyhd3eb1b0_0
+bokeh=3.4.1=py311h746a85d_0
+bottleneck=1.3.7=py311hd7041d2_0
+brotli=1.0.9=h2bbff1b_8
+brotli-bin=1.0.9=h2bbff1b_8
+brotli-python=1.0.9=py311hd77b12b_8
+bzip2=1.0.8=h2bbff1b_6
+ca-certificates=2024.9.24=haa95532_0
+certifi=2024.8.30=py311haa95532_0
+cffi=1.16.0=py311h2bbff1b_1
+charset-normalizer=3.3.2=pyhd3eb1b0_0
+click=8.1.7=py311haa95532_0
+colorama=0.4.6=py311haa95532_0
+comm=0.2.1=py311haa95532_0
+contourpy=1.2.0=py311h59b6b97_0
+cycler=0.11.0=pyhd3eb1b0_0
+debugpy=1.6.7=py311hd77b12b_0
+decorator=5.1.1=pyhd3eb1b0_0
+defusedxml=0.7.1=pyhd3eb1b0_0
+entrypoints=0.4=py311haa95532_0
+et_xmlfile=1.1.0=py311haa95532_0
+executing=0.8.3=pyhd3eb1b0_0
+filelock=3.16.1=pypi_0
+fonttools=4.51.0=py311h2bbff1b_0
+fqdn=1.5.1=pypi_0
+freetype=2.12.1=ha860e81_0
+fsspec=2024.9.0=pypi_0
+h11=0.14.0=py311haa95532_0
+httpcore=1.0.2=py311haa95532_0
+httpx=0.27.0=py311haa95532_0
+huggingface-hub=0.25.1=pypi_0
+icc_rt=2022.1.0=h6049295_2
+icu=73.1=h6c2663c_0
+idna=3.7=py311haa95532_0
+intel-openmp=2023.1.0=h59b6b97_46320
+ipykernel=6.28.0=py311haa95532_0
+ipympl=0.9.3=py311haa95532_0
+ipython=8.25.0=py311haa95532_0
+ipython_genutils=0.2.0=pyhd3eb1b0_1
+ipywidgets=8.1.5=pypi_0
+isoduration=20.11.0=pypi_0
+jedi=0.19.1=py311haa95532_0
+jinja2=3.1.4=py311haa95532_0
+joblib=1.4.2=py311haa95532_0
+jpeg=9e=h827c3e9_3
+json5=0.9.6=pyhd3eb1b0_0
+jsonpointer=3.0.0=pypi_0
+jsonschema=4.19.2=py311haa95532_0
+jsonschema-specifications=2023.7.1=py311haa95532_0
+jupyter-contrib-core=0.4.2=pypi_0
+jupyter-lsp=2.2.0=py311haa95532_0
+jupyter-nbextensions-configurator=0.6.4=pypi_0
+jupyter_client=7.4.9=py311haa95532_0
+jupyter_core=5.7.2=py311haa95532_0
+jupyter_events=0.10.0=py311haa95532_0
+jupyter_server=2.14.1=py311haa95532_0
+jupyter_server_terminals=0.4.4=py311haa95532_1
+jupyterlab=4.2.5=py311haa95532_0
+jupyterlab-widgets=3.0.13=pypi_0
+jupyterlab_pygments=0.1.2=py_0
+jupyterlab_server=2.27.3=py311haa95532_0
+jupyterlab_widgets=3.0.10=py311haa95532_0
+kiwisolver=1.4.4=py311hd77b12b_0
+krb5=1.20.1=h5b6d351_0
+lcms2=2.12=h83e58a3_0
+lerc=3.0=hd77b12b_0
+libbrotlicommon=1.0.9=h2bbff1b_8
+libbrotlidec=1.0.9=h2bbff1b_8
+libbrotlienc=1.0.9=h2bbff1b_8
+libclang=14.0.6=default_hb5a9fac_1
+libclang13=14.0.6=default_h8e68704_1
+libdeflate=1.17=h2bbff1b_1
+libffi=3.4.4=hd77b12b_1
+libpng=1.6.39=h8cc25b3_0
+libpq=12.17=h906ac69_0
+libsodium=1.0.18=h62dcd97_0
+libtiff=4.5.1=hd77b12b_0
+libwebp-base=1.3.2=h2bbff1b_0
+lz4-c=1.9.4=h2bbff1b_1
+markupsafe=2.1.3=py311h2bbff1b_0
+matplotlib=3.9.2=py311haa95532_0
+matplotlib-base=3.9.2=py311h472561b_0
+matplotlib-inline=0.1.6=py311haa95532_0
+mistune=2.0.4=py311haa95532_0
+mkl=2023.1.0=h6b88ed4_46358
+mkl-service=2.4.0=py311h2bbff1b_1
+mkl_fft=1.3.10=py311h827c3e9_0
+mkl_random=1.2.7=py311hea22821_0
+mpmath=1.3.0=pypi_0
+mysqlclient=2.2.4=pypi_0
+nb_conda_kernels=2.3.1=py311haa95532_0
+nbclassic=1.1.0=py311haa95532_0
+nbclient=0.8.0=py311haa95532_0
+nbconvert=7.10.0=py311haa95532_0
+nbformat=5.9.2=py311haa95532_0
+nest-asyncio=1.6.0=py311haa95532_0
+networkx=3.3=pypi_0
+nltk=3.9.1=py311haa95532_0
+notebook=6.5.7=py311haa95532_0
+notebook-shim=0.2.3=py311haa95532_0
+numexpr=2.8.7=py311h1fcbade_0
+numpy=1.26.4=py311hdab7c0b_0
+numpy-base=1.26.4=py311hd01c5d8_0
+openjpeg=2.5.2=hae555c5_0
+openpyxl=3.1.5=py311h827c3e9_0
+openssl=3.0.15=h827c3e9_0
+overrides=7.4.0=py311haa95532_0
+packaging=24.1=py311haa95532_0
+pandas=2.2.2=py311hea22821_0
+pandocfilters=1.5.0=pyhd3eb1b0_0
+parso=0.8.3=pyhd3eb1b0_0
+patsy=0.5.6=py311haa95532_0
+pillow=10.4.0=py311h827c3e9_0
+pip=24.2=py311haa95532_0
+platformdirs=3.10.0=py311haa95532_0
+ply=3.11=py311haa95532_0
+prometheus_client=0.14.1=py311haa95532_0
+prompt-toolkit=3.0.43=py311haa95532_0
+prompt_toolkit=3.0.43=hd3eb1b0_0
+psutil=5.9.0=py311h2bbff1b_0
+pure_eval=0.2.2=pyhd3eb1b0_0
+pybind11-abi=5=hd3eb1b0_0
+pycparser=2.21=pyhd3eb1b0_0
+pygments=2.15.1=py311haa95532_1
+pyparsing=3.1.2=py311haa95532_0
+pyqt=5.15.10=py311hd77b12b_0
+pyqt5-sip=12.13.0=py311h2bbff1b_0
+pysocks=1.7.1=py311haa95532_0
+python=3.11.9=he1021f5_0
+python-dateutil=2.9.0post0=py311haa95532_2
+python-dotenv=1.0.1=pyhd8ed1ab_0
+python-fastjsonschema=2.16.2=py311haa95532_0
+python-json-logger=2.0.7=py311haa95532_0
+python-tzdata=2023.3=pyhd3eb1b0_0
+pytz=2024.1=py311haa95532_0
+pywin32=305=py311h2bbff1b_0
+pywinpty=2.0.10=py311h5da7b33_0
+pyyaml=6.0.1=py311h2bbff1b_0
+pyzmq=24.0.1=py311h2bbff1b_0
+qt-main=5.15.2=h19c9488_10
+referencing=0.30.2=py311haa95532_0
+regex=2024.9.11=py311h827c3e9_0
+requests=2.32.3=py311haa95532_0
+rfc3339-validator=0.1.4=py311haa95532_0
+rfc3986-validator=0.1.1=py311haa95532_0
+rpds-py=0.10.6=py311h062c2fa_0
+safetensors=0.4.5=pypi_0
+scikit-learn=1.5.1=py311hea22821_0
+scipy=1.13.1=py311h9f229c6_0
+seaborn=0.13.2=py311haa95532_0
+send2trash=1.8.2=py311haa95532_0
+setuptools=72.1.0=py311haa95532_0
+sip=6.7.12=py311hd77b12b_0
+six=1.16.0=pyhd3eb1b0_1
+sniffio=1.3.0=py311haa95532_0
+soupsieve=2.5=py311haa95532_0
+sqlite=3.45.3=h2bbff1b_0
+stack_data=0.2.0=pyhd3eb1b0_0
+statsmodels=0.14.2=py311h57dcf0c_0
+svgling=0.5.0=pypi_0
+svgwrite=1.4.3=pypi_0
+sympy=1.13.3=pypi_0
+tbb=2021.8.0=h59b6b97_0
+terminado=0.17.1=py311haa95532_0
+threadpoolctl=3.5.0=py311h746a85d_0
+tiktoken=0.8.0=pypi_0
+tinycss2=1.2.1=py311haa95532_0
+tk=8.6.14=h0416ee5_0
+tokenizers=0.20.0=pypi_0
+torch=2.4.1=pypi_0
+tornado=6.4.1=py311h827c3e9_0
+tqdm=4.66.5=py311h746a85d_0
+traitlets=5.14.3=py311haa95532_0
+transformers=4.45.1=pypi_0
+types-python-dateutil=2.9.0.20240906=pypi_0
+typing-extensions=4.11.0=py311haa95532_0
+typing_extensions=4.11.0=py311haa95532_0
+tzdata=2024a=h04d1e81_0
+unicodedata2=15.1.0=py311h2bbff1b_0
+uri-template=1.3.0=pypi_0
+urllib3=2.2.2=py311haa95532_0
+vc=14.40=h2eaa2aa_0
+vs2015_runtime=14.40.33807=h98bb1dd_0
+wcwidth=0.2.5=pyhd3eb1b0_0
+webcolors=24.8.0=pypi_0
+webencodings=0.5.1=py311haa95532_1
+websocket-client=1.8.0=py311haa95532_0
+wheel=0.43.0=py311haa95532_0
+widgetsnbextension=4.0.13=pypi_0
+win_inet_pton=1.1.0=py311haa95532_0
+winpty=0.4.3=4
+xlrd=2.0.1=pyhd3eb1b0_1
+xyzservices=2022.9.0=py311haa95532_1
+xz=5.4.6=h8cc25b3_1
+yaml=0.2.5=he774522_0
+zeromq=4.3.5=hd77b12b_0
+zlib=1.2.13=h8cc25b3_1
+zstd=1.5.5=hd43e919_2
