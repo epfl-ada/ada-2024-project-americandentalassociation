@@ -73,10 +73,10 @@ Questions explored include whether global crises lead to shifts toward various g
   
 ## Team Organization
 Globally, each team member is responsible for a specific part of the analysis (see below), while merging and ensuring coherence is done collaboratively or in pairs. We hold weekly meetings to refine task distribution. 
-Q1: Anna (Film Trends Analysis)
-Q2: Michele (Cross-National Genre Comparisons)
-Q3: Binta (NER Analysis) and Flavia (Sentiment Analysis)
-Q4: Aidas (Audience Preferences and Google Trends Analysis)
+- Q1: Anna (Film Trends Analysis)
+- Q2: Michele (Cross-National Genre Comparisons)
+- Q3: Binta (NER Analysis) and Flavia (Sentiment Analysis)
+- Q4: Aidas (Audience Preferences and Google Trends Analysis)
 
 ## Questions for TAs
 - API Access: Google frequently updates backend restrictions, necessitating a third-party API for Question 4. How should authentication keys be handled?
