@@ -1,8 +1,8 @@
-import torch
-import numpy as np
-from torch.utils.data import DataLoader, Dataset
+# import torch
+# import numpy as np
+# from torch.utils.data import DataLoader, Dataset
 
-
+'''
 class SomeDataset(Dataset):
     """
     A dataset implements 2 functions
@@ -22,3 +22,4 @@ class SomeDatamodule(DataLoader):
     """
     def __init__(self):
         super().__init__()
+'''
