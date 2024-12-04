@@ -64,7 +64,7 @@ def bottom_years_for_genre(genre_counts_by_year, n=20):
 
 # Function to count genres for a specific year and return total movies
 def count_genres_by_year(dataframe, year):
-    filtered_df = dataframe[(dataframe['StartYear'] <= year) & (dataframe['EndYear'] >= year)].copy()
+    filtered_df = dataframe[dataframe['Year'] == year].copy()
     filtered_df.loc[:, 'Genres'] = filtered_df['Genres'].apply(lambda x: ast.literal_eval(x) if isinstance(x, str) else x)
     all_genres = [genre for genres in filtered_df['Genres'] for genre in genres]
     genre_counts = Counter(all_genres)
