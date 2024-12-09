@@ -25,6 +25,35 @@ def count_genre_over_years(dataframe, genre):
     )
     return genre_counts_by_year
 
+def get_event_years(df, war_name):
+    war_rows = df[df['WarName'].str.contains(war_name, case=False, na=False)]
+    if not war_rows.empty:
+        year1 = war_rows.iloc[0]["StartYear"]
+        year3 = war_rows.iloc[0]["EndYear"]
+        year0 = year1 - 2
+        year2 = (year1 + year3) // 2
+        year4 = year3 + 2
+        return year0, year1, year2, year3, year4
+    else:
+        print(f"No data found for {war_name}")
+        return None
+
+def count_genre_proportion(df, genre):
+    # Get the count of the specified genre over the years
+    genre_count = count_genre_over_years(df, genre)
+    
+    # Get the total count of all genres for each year
+    total_count = df.groupby('Year')['Genres'].apply(lambda x: len([genre for genres in x for genre in genres])).reset_index()
+    total_count.columns = ['Year', 'Total']
+    
+    # Merge the genre count with the total count by year
+    genre_count = pd.merge(genre_count, total_count, on='Year')
+    
+    # Calculate the proportion of War Films to total films for each year
+    genre_count['Proportion'] = genre_count['Count'] / genre_count['Total']
+    
+    return genre_count
+
 def top_years_for_genre(genre_counts_by_year, n=20):
     top_years = genre_counts_by_year.nlargest(n, 'Count')
     return top_years
