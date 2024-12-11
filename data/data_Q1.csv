@@ -7,8 +7,8 @@ Azeri-Armenian,1,1993,1994,['Armenia'],5500.0
 Azeri-Armenian,2,1993,1994,['Azerbaijan'],8500.0
 Badme Border,1,1998,2000,['Eritrea'],50000.0
 Badme Border,2,1998,2000,['Ethiopia'],70000.0
-Bangladesh,1,1971,1971,['India'],3241.0
-Bangladesh,2,1971,1971,['Pakistan'],7982.0
+Bangladesh Liberation,1,1971,1971,"['India', 'Bangladesh']",3241.0
+Bangladesh Liberation,2,1971,1971,['Pakistan'],7982.0
 Bosnian Independence,1,1992,1992,"['Croatia', 'Bosnia']",3350.0
 Bosnian Independence,2,1992,1992,['Yugoslavia'],1890.0
 Cenepa Valley,1,1995,1995,['Peru'],950.0
