@@ -16,13 +16,33 @@ def name_plot(ylabel, title):
 
 # Function to count the number of movies for each genre over the years
 def count_genre_over_years(dataframe, genre):
-    dataframe['Genres'] = dataframe['Genres'].apply(lambda x: ast.literal_eval(x) if isinstance(x, str) else x)
-    genre_counts_by_year = (
-        dataframe[dataframe['Genres'].apply(lambda genres: genre in genres)]
-        .groupby('Year')
-        .size()
-        .reset_index(name='Count')
+    # Make sure Year is an integer
+    dataframe['Year'] = dataframe['Year'].astype(int)
+
+    # Ensure 'Genres' is a list of genres
+    dataframe['Genres'] = dataframe['Genres'].apply(
+        lambda x: ast.literal_eval(x) if isinstance(x, str) else x
     )
+
+    # Filter to only rows containing the chosen genre
+    genre_df = dataframe[dataframe['Genres'].apply(lambda g: genre in g)]
+    
+    # Group by year and count
+    genre_counts_by_year = genre_df.groupby('Year').size().reset_index(name='Count')
+
+    # Determine the full range of years in the dataset
+    min_year = dataframe['Year'].min()
+    max_year = dataframe['Year'].max()
+
+    # Create a complete list of all years in the range
+    all_years = pd.DataFrame({'Year': range(min_year, max_year + 1)})
+
+    # Merge the complete years with the genre counts
+    genre_counts_by_year = pd.merge(all_years, genre_counts_by_year, on='Year', how='left')
+
+    # Fill missing values with 0
+    genre_counts_by_year['Count'] = genre_counts_by_year['Count'].fillna(0)
+
     return genre_counts_by_year
 
 def get_event_years(df, war_name):
