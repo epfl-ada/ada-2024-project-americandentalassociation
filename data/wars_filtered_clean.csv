@@ -16,7 +16,6 @@ Nomonhan,Mongolia,1,1939,1939,7,1,3000.0,810
 Nomonhan,Japan,2,1939,1939,7,2,20000.0,810
 World War II,Hungary,2,1941,1945,2,2,136000.0,1758
 World War II,Belgium,1,1940,1940,2,1,9600.0,1758
-World War II,France,2,1940,1941,2,2,2500.0,1758
 World War II,Yugoslavia,1,1941,1941,2,1,305000.0,1758
 World War II,Finland,2,1941,1944,2,2,65000.0,1758
 World War II,Norway,1,1940,1940,2,1,3000.0,1758
@@ -25,13 +24,10 @@ World War II,United States of America,1,1941,1945,19,1,405400.0,1758
 World War II,United Kingdom,1,1939,1945,15,1,418765.0,1758
 World War II,Netherlands,1,1940,1940,2,1,7900.0,1758
 World War II,Italy,2,1940,1943,14,2,174500.0,1758
-World War II,Romania,1,1944,1945,2,1,10000.0,1758
 World War II,Romania,2,1941,1944,2,2,290000.0,1758
 World War II,Bulgaria,2,1941,1944,2,2,9000.0,1758
-World War II,Bulgaria,1,1944,1945,2,1,1000.0,1758
 World War II,Greece,1,1940,1941,2,1,18300.0,1758
 World War II,Brazil,1,1944,1945,2,1,1000.0,1758
-World War II,Italy,1,1943,1945,14,1,52400.0,1758
 World War II,Australia,1,1939,1945,16,1,33826.0,1758
 World War II,New Zealand,1,1939,1945,16,1,12200.0,1758
 World War II,USSR,1,1945,1945,12,1,7500000.0,1758
@@ -90,7 +86,6 @@ Assam,China (PRC),1,1962,1962,7,1,500.0,867
 "Vietnam War, Phase 2",Cambodia,2,1970,1975,7,2,2500.0,3101
 "Vietnam War, Phase 2",South Korea,2,1965,1973,7,2,4687.0,3101
 "Vietnam War, Phase 2",Philippines,2,1966,1973,7,2,1000.0,3101
-"Vietnam War, Phase 2",South Vietnam,2,1965,1975,7,2,254257.0,3101
 "Vietnam War, Phase 2",Vietnam,1,1965,1975,7,1,700000.0,3101
 "Vietnam War, Phase 2",Thailand,2,1967,1973,7,2,351.0,3101
 "Vietnam War, Phase 2",Australia,2,1965,1972,7,2,494.0,3101

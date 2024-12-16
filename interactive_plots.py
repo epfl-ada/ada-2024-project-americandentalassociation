@@ -7,7 +7,14 @@ from utils_wars import *
 
 
 def get_genres_year_side(wars, movies, war, mode="summary"):
-
+    """
+    Get the genres of movies produced during a specific war, separated by the sides of the war.
+    :param wars: DataFrame containing information about wars
+    :param movies: DataFrame containing information about movies
+    :param war: Name of the war
+    :param mode: Mode of analysis (summary or country)
+    :return: Name of the war, genres of movies produced during the war on side 1, genres of movies produced during the war on side 2, genres of movies produced in total on side 1, genres of movies produced in total on side 2
+    """
     war_data = wars[wars.index==war]
     side_1, side_2 = find_sides(war_data)
     start_year, end_year = find_years(war_data)
@@ -32,7 +39,14 @@ def get_genres_year_side(wars, movies, war, mode="summary"):
     return war, genres_war_1, genres_war_2, genres_side_1, genres_side_2
 
 def plot_genres_year_side(war, genres_war_1, genres_war_2, genres_side_1, genres_side_2):
-
+    """
+    Plot the genres of movies produced during a specific war, separated by the sides of the war.
+    :param war: Name of the war
+    :param genres_war_1: Genres of movies produced during the war on side 1
+    :param genres_war_2: Genres of movies produced during the war on side 2
+    :param genres_side_1: Genres of movies produced in total on side 1
+    :param genres_side_2: Genres of movies produced in total on side 2
+    """
     if war is None:
         print("Not Enough Data")
         return
@@ -86,6 +100,14 @@ def plot_genres_year_side(war, genres_war_1, genres_war_2, genres_side_1, genres
     fig.show()
 
 def plot_countries(side_1, side_2, war):
+    """
+    Plot the countries in each side of a war on a world map.
+    :param side_1: List of countries in side 1
+    :param side_2: List of countries in side 2
+    :param war: Name of the war
+    """
+    if war == "Korean": war = "Korean War"
+    if war == "Vietnam War, Phase 2": war = "Vietnam War"
     countries = side_1 + side_2
     colors = ["indianred"] * len(side_1) + ["cornflowerblue"] * len(side_2)
 
@@ -135,6 +157,14 @@ def plot_countries(side_1, side_2, war):
     fig.show()
 
 def get_genres_summary_side(wars, movies, war, mode="country"):
+    """
+    Get the genres of movies produced about a specific war, separated by the sides of the war.
+    :param wars: DataFrame containing information about wars
+    :param movies: DataFrame containing information about movies
+    :param war: Name of the war
+    :param mode: Mode of analysis (summary or country) based on the column to filter on
+    :return: Name of the war, genres of movies produced about the war on side 1, genres of movies produced about the war on side 2, genres of movies produced in total on side 1, genres of movies produced in total on side 2
+    """
     war_data = wars[wars.index==war]
     side_1, side_2 = find_sides(war_data)
 
@@ -158,7 +188,14 @@ def get_genres_summary_side(wars, movies, war, mode="country"):
     return war, genres_war_1, genres_war_2, genres_side_1, genres_side_2
 
 def plot_genres_summary_side(war, genres_war_1, genres_war_2, genres_side_1, genres_side_2):
-
+    """
+    Plot the genres of movies produced about a specific war, separated by the sides of the war.
+    :param war: Name of the war
+    :param genres_war_1: Genres of movies produced about the war on side 1
+    :param genres_war_2: Genres of movies produced about the war on side 2
+    :param genres_side_1: Genres of movies produced in total on side 1
+    :param genres_side_2: Genres of movies produced in total on side 2
+    """
     if war is None:
         print("Not Enough Data")
         return
@@ -212,6 +249,14 @@ def plot_genres_summary_side(war, genres_war_1, genres_war_2, genres_side_1, gen
     fig.show()
 
 def get_movies_year_side(wars, movies, war, mode="summary"):
+    """
+    Get the movies produced during a specific war, separated by the sides of the war.
+    :param wars: DataFrame containing information about wars
+    :param movies: DataFrame containing information about movies
+    :param war: Name of the war
+    :param mode: Mode of analysis (summary or country)
+    :return: Name of the war, movies produced during the war on side 1, movies produced during the war on side 2, movies produced in total on side 1, movies produced in total on side 2
+    """
     war_data = wars[wars.index==war]
     side_1, side_2 = find_sides(war_data)
 
@@ -227,6 +272,13 @@ def get_movies_year_side(wars, movies, war, mode="summary"):
     return war, movies_war_1, movies_war_2, movies_side_1, movies_side_2
 
 def plot_movies_timeline(wars, movies, war_list, war_line_flag=True):
+    """
+    Plot the number of movies produced about each war over time.
+    :param wars: DataFrame containing information about wars
+    :param movies: DataFrame containing information about movies
+    :param war_list: List of wars to plot
+    :param war_line_flag: Flag to indicate whether to plot vertical lines for the start and end years of the
+    """
     war_timelines = []
     for war in war_list:
         war_data = wars[wars.index == war]
@@ -330,6 +382,12 @@ def plot_movies_timeline(wars, movies, war_list, war_line_flag=True):
     fig.show()
 
 def plot_country_piechart(wars, movies, war):
+    """
+    Plot a pie chart of the countries in each side of a war.
+    :param wars: DataFrame containing information about wars
+    :param movies: DataFrame containing information about movies
+    :param war: Name of the war
+    """
     side_1, side_2 = find_sides(wars[wars.index==war])
 
     if war == "Korean": war = "Korean War"
