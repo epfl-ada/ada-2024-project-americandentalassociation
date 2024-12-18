@@ -1,10 +1,12 @@
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import plotly.express as px
+import matplotlib.pyplot as plt
+from PIL import Image
+import os
 
 from utils_movie import *
 from utils_wars import *
-
 
 def get_genres_year_side(wars, movies, war, mode="summary"):
     """
@@ -92,12 +94,19 @@ def plot_genres_year_side(war, genres_war_1, genres_war_2, genres_side_1, genres
     fig.update_xaxes(title_text="Genres", row=1, col=1)
     fig.update_xaxes(title_text="Genres", row=1, col=2)
     fig.update_layout(
-        title=f"Genres during {war}",
+        title=dict(text=f"Genres for movies during {war}", font=dict(size=40)),
         barmode="group",
         yaxis_title="Normalized count"
     )
 
-    fig.show()
+    # fig.show()
+    fig.write_image("temp.png", engine="orca", width=1600, height=800, scale=6)
+    img = Image.open("temp.png")
+    plt.figure(figsize=(16, 8))
+    plt.imshow(img)
+    plt.axis('off')
+    plt.show()
+    os.remove("temp.png")
 
 def plot_countries(side_1, side_2, war):
     """
@@ -140,6 +149,7 @@ def plot_countries(side_1, side_2, war):
     )
 
     fig.update_layout(
+        autosize=False,
         title=f"Countries in Side 1 and Side 2 during {war}",
         geo=dict(
             showframe=False,
@@ -154,7 +164,14 @@ def plot_countries(side_1, side_2, war):
         )
     )
 
-    fig.show()
+    # fig.show()
+    fig.write_image("temp.png", engine="orca", scale=6)
+    img = Image.open("temp.png")
+    plt.figure(figsize=(16, 12))
+    plt.imshow(img, aspect="equal")
+    plt.axis('off')
+    plt.show()
+    os.remove("temp.png")
 
 def get_genres_summary_side(wars, movies, war, mode="country"):
     """
@@ -241,12 +258,21 @@ def plot_genres_summary_side(war, genres_war_1, genres_war_2, genres_side_1, gen
     fig.update_xaxes(title_text="Genres", row=1, col=1)
     fig.update_xaxes(title_text="Genres", row=1, col=2)
     fig.update_layout(
-        title=f"Genres for movies about {war}",
+        title=dict(text=f"Genres for movies about {war}", font=dict(size=40)),
         barmode="group",
         yaxis_title="Normalized count"
     )
 
-    fig.show()
+    # fig.show()
+
+    # fig.show()
+    fig.write_image("temp.png", engine="orca", width=1600, height=800, scale=6)
+    img = Image.open("temp.png")
+    plt.figure(figsize=(16, 8))
+    plt.imshow(img)
+    plt.axis('off')
+    plt.show()
+    os.remove("temp.png")
 
 def get_movies_year_side(wars, movies, war, mode="summary"):
     """
@@ -379,7 +405,15 @@ def plot_movies_timeline(wars, movies, war_list, war_line_flag=True):
         hovermode='x unified'
     )
 
-    fig.show()
+    # fig.show()
+
+    fig.write_image("temp.png", engine="orca", scale=6)
+    img = Image.open("temp.png")
+    plt.figure(figsize=(24, 8))
+    plt.imshow(img, aspect="equal")
+    plt.axis('off')
+    plt.show()
+    os.remove("temp.png")
 
 def plot_country_piechart(wars, movies, war):
     """
@@ -403,4 +437,12 @@ def plot_country_piechart(wars, movies, war):
         title=f'Movies about {war} by Country',
         hovermode='x unified'
     )
-    fig.show()
+    # fig.show()
+
+    fig.write_image("temp.png", engine="orca", scale=6)
+    img = Image.open("temp.png")
+    plt.figure(figsize=(16, 12))
+    plt.imshow(img, aspect="equal")
+    plt.axis('off')
+    plt.show()
+    os.remove("temp.png")
