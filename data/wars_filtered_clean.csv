@@ -1,191 +1,201 @@
-WarName,WarNum,StateName,Side,StartYear,EndYear,WhereFought,Outcome,BatDeath,Movies
-Second Sino-Japanese,121,Japan,1,1931,1933,7,1,10000,931
-Second Sino-Japanese,121,China,2,1931,1933,7,2,50000,931
-Chaco,124,Bolivia,2,1932,1935,1,2,56661,1198
-Chaco,124,Paraguay,1,1932,1935,1,1,36000,1198
-Saudi-Yemeni,125,Saudi Arabia,1,1934,1934,6,1,100,806
-Saudi-Yemeni,125,Yemen Arab Republic,2,1934,1934,6,2,2000,806
-Conquest of Ethiopia,127,Italy,1,1935,1936,4,1,4000,987
-Conquest of Ethiopia,127,Ethiopia,2,1935,1936,4,2,16000,987
-Third Sino-Japanese,130,China,2,1937,1941,7,2,750000,1483
-Third Sino-Japanese,130,Japan,1,1937,1941,7,1,250000,1483
-Changkufeng,133,USSR,2,1938,1938,7,1,1200,809
-Changkufeng,133,Japan,1,1938,1938,7,2,526,809
-Nomonhan,136,USSR,1,1939,1939,7,1,5000,810
-Nomonhan,136,Mongolia,1,1939,1939,7,1,3000,810
-Nomonhan,136,Japan,2,1939,1939,7,2,20000,810
-World War II,139,Hungary,2,1941,1945,2,2,136000,1758
-World War II,139,Belgium,1,1940,1940,2,1,9600,1758
-World War II,139,France,2,1940,1941,2,2,2500,1758
-World War II,139,Yugoslavia,1,1941,1941,2,1,305000,1758
-World War II,139,Finland,2,1941,1944,2,2,65000,1758
-World War II,139,Norway,1,1940,1940,2,1,3000,1758
-World War II,139,Canada,1,1939,1945,2,1,41992,1758
-World War II,139,United States of America,1,1941,1945,19,1,405400,1758
-World War II,139,United Kingdom,1,1939,1945,15,1,418765,1758
-World War II,139,Netherlands,1,1940,1940,2,1,7900,1758
-World War II,139,Italy,2,1940,1943,14,2,174500,1758
-World War II,139,Romania,1,1944,1945,2,1,10000,1758
-World War II,139,Romania,2,1941,1944,2,2,290000,1758
-World War II,139,Bulgaria,2,1941,1944,2,2,9000,1758
-World War II,139,Bulgaria,1,1944,1945,2,1,1000,1758
-World War II,139,Greece,1,1940,1941,2,1,18300,1758
-World War II,139,Brazil,1,1944,1945,2,1,1000,1758
-World War II,139,Italy,1,1943,1945,14,1,52400,1758
-World War II,139,Australia,1,1939,1945,16,1,33826,1758
-World War II,139,New Zealand,1,1939,1945,16,1,12200,1758
-World War II,139,USSR,1,1945,1945,12,1,7500000,1758
-World War II,139,Germany,2,1939,1945,14,2,3500000,1758
-World War II,139,Poland,1,1939,1939,2,1,320000,1758
-World War II,139,France,1,1944,1945,2,1,210824,1758
-World War II,139,Japan,2,1941,1945,17,2,1740000,1758
-World War II,139,Mongolia,1,1945,1945,7,1,3000,1758
-World War II,139,China,1,1941,1945,7,1,1350000,1758
-World War II,139,South Africa,1,1939,1945,4,1,8700,1758
-World War II,139,Ethiopia,1,1941,1941,4,1,5000,1758
-Russo-Finnish,142,Finland,2,1939,1940,2,2,24923,979
-Russo-Finnish,142,USSR,1,1939,1940,2,1,126875,979
-Franco-Thai,145,France,2,1940,1941,7,2,700,961
-Franco-Thai,145,Thailand,1,1940,1941,7,1,700,961
-First Kashmir,147,India,1,1947,1949,7,6,2500,1207
-First Kashmir,147,Pakistan,2,1947,1949,7,6,1000,1207
-Arab-Israeli,148,Israel,1,1948,1949,6,1,3000,1066
-Arab-Israeli,148,Egypt,2,1948,1949,6,2,2000,1066
-Arab-Israeli,148,Syria,2,1948,1948,6,2,1000,1066
-Arab-Israeli,148,Lebanon,2,1948,1948,6,2,500,1066
-Arab-Israeli,148,Jordan,2,1948,1948,6,2,1000,1066
-Arab-Israeli,148,Iraq,2,1948,1948,6,2,500,1066
-Korean,151,China,2,1950,1953,7,6,422612,1540
-Korean,151,Belgium,1,1951,1953,7,6,97,1540
-Korean,151,Canada,1,1950,1953,7,6,309,1540
-Korean,151,Colombia,1,1951,1953,7,6,140,1540
-Korean,151,United Kingdom,1,1950,1953,7,6,710,1540
-Korean,151,Netherlands,1,1951,1953,7,6,111,1540
-Korean,151,Greece,1,1951,1953,7,6,169,1540
-Korean,151,France,1,1951,1953,7,6,288,1540
-Korean,151,Turkey,1,1950,1953,7,6,717,1540
-Korean,151,Philippines,1,1950,1953,7,6,92,1540
-Korean,151,Thailand,1,1951,1953,7,6,114,1540
-Korean,151,North Korea,2,1950,1953,7,6,316579,1540
-Korean,151,Ethiopia,1,1951,1953,7,6,120,1540
-Korean,151,Australia,1,1950,1953,7,6,291,1540
-Korean,151,South Korea,1,1950,1953,7,6,113248,1540
-Korean,151,United States of America,1,1950,1953,7,6,54487,1540
-Off-shore Islands,153,China,1,1954,1955,7,1,1003,1217
-Off-shore Islands,153,Taiwan,2,1954,1955,7,2,1367,1217
-Sinai War,155,France,1,1956,1956,6,1,10,1011
-Sinai War,155,Israel,1,1956,1956,6,1,189,1011
-Sinai War,155,Egypt,2,1956,1956,6,2,3000,1011
-Sinai War,155,United Kingdom,1,1956,1956,6,1,22,1011
-Soviet Invasion of Hungary,156,Hungary,2,1956,1956,2,2,926,1011
-Soviet Invasion of Hungary,156,USSR,1,1956,1956,2,1,1500,1011
-IfniWar,158,France,1,1958,1958,6,1,0,1194
-IfniWar,158,Spain,1,1957,1958,6,1,122,1194
-IfniWar,158,Morocco,2,1957,1958,6,2,1000,1194
-Taiwan Straits,159,China (PRC),1,1958,1958,7,6,300,995
-Taiwan Straits,159,Taiwan (ROC),2,1958,1958,7,6,1500,995
-Assam,160,India,2,1962,1962,7,2,1353,867
-Assam,160,China (PRC),1,1962,1962,7,1,500,867
-"Vietnam War, Phase 2",163,United States of America,2,1965,1973,7,2,58153,3101
-"Vietnam War, Phase 2",163,Cambodia,2,1970,1975,7,2,2500,3101
-"Vietnam War, Phase 2",163,South Korea,2,1965,1973,7,2,4687,3101
-"Vietnam War, Phase 2",163,Philippines,2,1966,1973,7,2,1000,3101
-"Vietnam War, Phase 2",163,South Vietnam,2,1965,1975,7,2,254257,3101
-"Vietnam War, Phase 2",163,Vietnam,1,1965,1975,7,1,700000,3101
-"Vietnam War, Phase 2",163,Thailand,2,1967,1973,7,2,351,3101
-"Vietnam War, Phase 2",163,Australia,2,1965,1972,7,2,494,3101
-Second Kashmir,166,India,2,1965,1965,7,2,3261,953
-Second Kashmir,166,Pakistan,1,1965,1965,7,1,3800,953
-Six Day War,169,Israel,1,1967,1967,6,1,1000,1025
-Six Day War,169,Egypt,2,1967,1967,6,2,10000,1025
-Six Day War,169,Jordan,2,1967,1967,6,2,6100,1025
-Six Day War,169,Syria,2,1967,1967,6,2,2500,1025
-"Second Laotian, Phase 2",170,United States of America,2,1968,1973,7,2,375,2136
-"Second Laotian, Phase 2",170,Thailand,2,1970,1973,7,2,-9,2136
-"Second Laotian, Phase 2",170,Laos,2,1968,1973,7,2,11250,2136
-"Second Laotian, Phase 2",170,Vietnam,1,1968,1973,7,1,2250,2136
-War of Attrition,172,Egypt,2,1969,1970,6,6,5000,1311
-War of Attrition,172,Israel,1,1969,1970,6,6,368,1311
-Football War,175,Honduras,2,1969,1969,1,2,1200,1075
-Football War,175,El Salvador,1,1969,1969,1,1,700,1075
-Communist Coalition,176,Vietnam,1,1970,1971,7,4,400,1313
-Communist Coalition,176,United States of America,2,1970,1971,7,4,125,1313
-Communist Coalition,176,Cambodia,2,1970,1971,7,4,5000,1313
-Communist Coalition,176,South Vietnam,2,1970,1971,7,4,1000,1313
-Bangladesh,178,India,1,1971,1971,7,1,3241,1116
-Bangladesh,178,Pakistan,2,1971,1971,7,2,7982,1116
-Yom Kippur War,181,Egypt,2,1973,1973,6,2,7700,1095
-Yom Kippur War,181,Saudi Arabia,2,1973,1973,6,2,100,1095
-Yom Kippur War,181,Israel,1,1973,1973,6,1,2838,1095
-Yom Kippur War,181,Jordan,2,1973,1973,6,2,23,1095
-Yom Kippur War,181,Syria,2,1973,1973,6,2,3500,1095
-Yom Kippur War,181,Iraq,2,1973,1973,6,2,278,1095
-Turco-Cypriot,184,Turkey,1,1974,1974,2,1,1000,1074
-Turco-Cypriot,184,Cyprus,2,1974,1974,2,2,500,1074
-War over Angola,186,Cuba,1,1975,1976,4,4,1500,1286
-War over Angola,186,South Africa,2,1975,1976,4,4,100,1286
-War over Angola,186,Democratic Republic of the Congo,2,1975,1976,4,4,100,1286
-War over Angola,186,Angola,1,1975,1976,4,4,1000,1286
-"Second Ogaden War, Phase 2",187,Ethiopia,1,1977,1978,4,4,1800,1340
-"Second Ogaden War, Phase 2",187,Cuba,1,1977,1978,4,4,700,1340
-"Second Ogaden War, Phase 2",187,Somalia,2,1977,1978,4,4,8000,1340
-Vietnamese-Cambodian,189,Vietnam,1,1977,1979,7,4,3000,1577
-Vietnamese-Cambodian,189,Cambodia,2,1977,1979,7,4,5000,1577
-Ugandian-Tanzanian,190,Uganda,2,1978,1979,4,2,1500,1386
-Ugandian-Tanzanian,190,Tanzania,1,1978,1979,4,1,1000,1386
-Ugandian-Tanzanian,190,Libya,2,1979,1979,4,2,500,1386
-Sino-Vietnamese Punitive,193,China,1,1979,1979,7,1,13000,1178
-Sino-Vietnamese Punitive,193,Vietnam,2,1979,1979,7,2,8000,1178
-Iran-Iraq,199,Iraq,2,1980,1988,6,6,500000,3977
-Iran-Iraq,199,Iran,1,1980,1988,6,6,750000,3977
-Falkland Islands,202,United Kingdom,1,1982,1982,1,1,255,1300
-Falkland Islands,202,Argentina,2,1982,1982,1,2,746,1300
-War over Lebanon,205,Israel,1,1982,1982,6,6,455,1300
-War over Lebanon,205,Syria,2,1982,1982,6,6,1200,1300
-War over the Aouzou Strip,207,Chad,1,1986,1987,18,1,1000,2114
-War over the Aouzou Strip,207,Libya,2,1986,1987,18,2,7000,2114
-Sino-Vietnamese Border War,208,Vietnam,2,1987,1987,7,6,2200,1828
-Sino-Vietnamese Border War,208,China,1,1987,1987,7,6,1800,1828
-Gulf War,211,Kuwait,1,1990,1991,6,1,1000,2347
-Gulf War,211,United States of America,1,1991,1991,6,1,376,2347
-Gulf War,211,Canada,1,1991,1991,6,1,0,2347
-Gulf War,211,United Kingdom,1,1991,1991,6,1,24,2347
-Gulf War,211,Italy,1,1991,1991,6,1,0,2347
-Gulf War,211,Morocco,1,1991,1991,6,1,0,2347
-Gulf War,211,Iraq,2,1990,1991,6,2,40000,2347
-Gulf War,211,Egypt,1,1991,1991,6,1,14,2347
-Gulf War,211,Oman,1,1991,1991,6,1,0,2347
-Gulf War,211,France,1,1991,1991,6,1,2,2347
-Gulf War,211,United Arab Emirates,1,1991,1991,6,1,6,2347
-Gulf War,211,Qatar,1,1991,1991,6,1,0,2347
-Gulf War,211,Saudi Arabia,1,1991,1991,6,1,44,2347
-Gulf War,211,Syria,1,1991,1991,6,1,0,2347
-Bosnian Independence,215,Croatia,1,1992,1992,2,4,500,2034
-Bosnian Independence,215,Bosnia,1,1992,1992,2,4,2850,2034
-Bosnian Independence,215,Yugoslavia,2,1992,1992,2,4,1890,2034
-Azeri-Armenian,216,Azerbaijan,2,1993,1994,2,2,8500,2608
-Azeri-Armenian,216,Armenia,1,1993,1994,2,1,5500,2608
-Cenepa Valley,217,Ecuador,2,1995,1995,1,3,550,2410
-Cenepa Valley,217,Peru,1,1995,1995,1,3,950,2410
-Badme Border,219,Eritrea,1,1998,2000,4,6,50000,4220
-Badme Border,219,Ethiopia,2,1998,2000,4,6,70000,4220
-War for Kosovo,221,Turkey,1,1999,1999,2,1,0,2942
-War for Kosovo,221,Italy,1,1999,1999,2,1,0,2942
-War for Kosovo,221,United Kingdom,1,1999,1999,2,1,0,2942
-War for Kosovo,221,United States of America,1,1999,1999,2,1,2,2942
-War for Kosovo,221,Netherlands,1,1999,1999,2,1,0,2942
-War for Kosovo,221,France,1,1999,1999,2,1,0,2942
-War for Kosovo,221,Yugoslavia,2,1999,1999,2,2,5000,2942
-War for Kosovo,221,Germany,1,1999,1999,2,1,0,2942
-Kargil War,223,India,1,1999,1999,7,1,474,2942
-Kargil War,223,Pakistan,2,1999,1999,7,2,698,2942
-Invasion of Afghanistan,225,Canada,1,2001,2001,7,4,0,3426
-Invasion of Afghanistan,225,France,1,2001,2001,7,4,0,3426
-Invasion of Afghanistan,225,United Kingdom,1,2001,2001,7,4,0,3426
-Invasion of Afghanistan,225,United States of America,1,2001,2001,7,4,2,3426
-Invasion of Afghanistan,225,Australia,1,2001,2001,7,4,0,3426
-Invasion of Afghanistan,225,Afghanistan,2,2001,2001,7,4,4000,3426
-Invasion of Iraq,227,Australia,1,2003,2003,6,4,0,3988
-Invasion of Iraq,227,United Kingdom,1,2003,2003,6,4,33,3988
-Invasion of Iraq,227,United States of America,1,2003,2003,6,4,140,3988
-Invasion of Iraq,227,Iraq,2,2003,2003,6,4,7000,3988
+WarName,StateName,Side,StartYear,EndYear,WhereFought,Outcome,BatDeath,Movies
+Second Sino-Japanese,Japan,1,1931,1933,7,1,10000.0,931
+Second Sino-Japanese,China,2,1931,1933,7,2,50000.0,931
+Chaco,Bolivia,2,1932,1935,1,2,56661.0,1198
+Chaco,Paraguay,1,1932,1935,1,1,36000.0,1198
+Saudi-Yemeni,Saudi Arabia,1,1934,1934,6,1,100.0,806
+Saudi-Yemeni,Yemen Arab Republic,2,1934,1934,6,2,2000.0,806
+Conquest of Ethiopia,Italy,1,1935,1936,4,1,4000.0,987
+Conquest of Ethiopia,Ethiopia,2,1935,1936,4,2,16000.0,987
+Third Sino-Japanese,China,2,1937,1941,7,2,750000.0,1483
+Third Sino-Japanese,Japan,1,1937,1941,7,1,250000.0,1483
+Changkufeng,USSR,2,1938,1938,7,1,1200.0,809
+Changkufeng,Japan,1,1938,1938,7,2,526.0,809
+Nomonhan,USSR,1,1939,1939,7,1,5000.0,810
+Nomonhan,Mongolia,1,1939,1939,7,1,3000.0,810
+Nomonhan,Japan,2,1939,1939,7,2,20000.0,810
+World War II,Hungary,2,1941,1945,2,2,136000.0,1758
+World War II,Belgium,1,1940,1940,2,1,9600.0,1758
+World War II,Yugoslavia,1,1941,1941,2,1,305000.0,1758
+World War II,Finland,2,1941,1944,2,2,65000.0,1758
+World War II,Norway,1,1940,1940,2,1,3000.0,1758
+World War II,Canada,1,1939,1945,2,1,41992.0,1758
+World War II,United States of America,1,1941,1945,19,1,405400.0,1758
+World War II,United Kingdom,1,1939,1945,15,1,418765.0,1758
+World War II,Netherlands,1,1940,1940,2,1,7900.0,1758
+World War II,Italy,2,1940,1943,14,2,174500.0,1758
+World War II,Romania,2,1941,1944,2,2,290000.0,1758
+World War II,Bulgaria,2,1941,1944,2,2,9000.0,1758
+World War II,Greece,1,1940,1941,2,1,18300.0,1758
+World War II,Brazil,1,1944,1945,2,1,1000.0,1758
+World War II,Australia,1,1939,1945,16,1,33826.0,1758
+World War II,New Zealand,1,1939,1945,16,1,12200.0,1758
+World War II,USSR,1,1945,1945,12,1,7500000.0,1758
+World War II,Germany,2,1939,1945,14,2,3500000.0,1758
+World War II,Poland,1,1939,1939,2,1,320000.0,1758
+World War II,France,1,1944,1945,2,1,210824.0,1758
+World War II,Japan,2,1941,1945,17,2,1740000.0,1758
+World War II,Mongolia,1,1945,1945,7,1,3000.0,1758
+World War II,China,1,1941,1945,7,1,1350000.0,1758
+World War II,South Africa,1,1939,1945,4,1,8700.0,1758
+World War II,Ethiopia,1,1941,1941,4,1,5000.0,1758
+Russo-Finnish,Finland,2,1939,1940,2,2,24923.0,979
+Russo-Finnish,USSR,1,1939,1940,2,1,126875.0,979
+Franco-Thai,France,2,1940,1941,7,2,700.0,961
+Franco-Thai,Thailand,1,1940,1941,7,1,700.0,961
+First Kashmir,India,1,1947,1949,7,6,2500.0,1207
+First Kashmir,Pakistan,2,1947,1949,7,6,1000.0,1207
+Arab-Israeli,Israel,1,1948,1949,6,1,3000.0,1066
+Arab-Israeli,Egypt,2,1948,1949,6,2,2000.0,1066
+Arab-Israeli,Syria,2,1948,1948,6,2,1000.0,1066
+Arab-Israeli,Lebanon,2,1948,1948,6,2,500.0,1066
+Arab-Israeli,Jordan,2,1948,1948,6,2,1000.0,1066
+Arab-Israeli,Iraq,2,1948,1948,6,2,500.0,1066
+Korean,China,2,1950,1953,7,6,422612.0,1540
+Korean,Belgium,1,1951,1953,7,6,97.0,1540
+Korean,Canada,1,1950,1953,7,6,309.0,1540
+Korean,Colombia,1,1951,1953,7,6,140.0,1540
+Korean,United Kingdom,1,1950,1953,7,6,710.0,1540
+Korean,Netherlands,1,1951,1953,7,6,111.0,1540
+Korean,Greece,1,1951,1953,7,6,169.0,1540
+Korean,France,1,1951,1953,7,6,288.0,1540
+Korean,Turkey,1,1950,1953,7,6,717.0,1540
+Korean,Philippines,1,1950,1953,7,6,92.0,1540
+Korean,Thailand,1,1951,1953,7,6,114.0,1540
+Korean,North Korea,2,1950,1953,7,6,316579.0,1540
+Korean,Ethiopia,1,1951,1953,7,6,120.0,1540
+Korean,Australia,1,1950,1953,7,6,291.0,1540
+Korean,South Korea,1,1950,1953,7,6,113248.0,1540
+Korean,United States of America,1,1950,1953,7,6,54487.0,1540
+Off-shore Islands,China,1,1954,1955,7,1,1003.0,1217
+Off-shore Islands,Taiwan,2,1954,1955,7,2,1367.0,1217
+Sinai War,France,1,1956,1956,6,1,10.0,1011
+Sinai War,Israel,1,1956,1956,6,1,189.0,1011
+Sinai War,Egypt,2,1956,1956,6,2,3000.0,1011
+Sinai War,United Kingdom,1,1956,1956,6,1,22.0,1011
+Soviet Invasion of Hungary,Hungary,2,1956,1956,2,2,926.0,1011
+Soviet Invasion of Hungary,USSR,1,1956,1956,2,1,1500.0,1011
+IfniWar,France,1,1958,1958,6,1,0.0,1194
+IfniWar,Spain,1,1957,1958,6,1,122.0,1194
+IfniWar,Morocco,2,1957,1958,6,2,1000.0,1194
+Taiwan Straits,China (PRC),1,1958,1958,7,6,300.0,995
+Taiwan Straits,Taiwan (ROC),2,1958,1958,7,6,1500.0,995
+Assam,India,2,1962,1962,7,2,1353.0,867
+Assam,China (PRC),1,1962,1962,7,1,500.0,867
+"Vietnam War, Phase 2",United States of America,2,1965,1973,7,2,58153.0,3101
+"Vietnam War, Phase 2",Cambodia,2,1970,1975,7,2,2500.0,3101
+"Vietnam War, Phase 2",South Korea,2,1965,1973,7,2,4687.0,3101
+"Vietnam War, Phase 2",Philippines,2,1966,1973,7,2,1000.0,3101
+"Vietnam War, Phase 2",Vietnam,1,1965,1975,7,1,700000.0,3101
+"Vietnam War, Phase 2",Thailand,2,1967,1973,7,2,351.0,3101
+"Vietnam War, Phase 2",Australia,2,1965,1972,7,2,494.0,3101
+Second Kashmir,India,2,1965,1965,7,2,3261.0,953
+Second Kashmir,Pakistan,1,1965,1965,7,1,3800.0,953
+Six Day War,Israel,1,1967,1967,6,1,1000.0,1025
+Six Day War,Egypt,2,1967,1967,6,2,10000.0,1025
+Six Day War,Jordan,2,1967,1967,6,2,6100.0,1025
+Six Day War,Syria,2,1967,1967,6,2,2500.0,1025
+"Second Laotian, Phase 2",United States of America,2,1968,1973,7,2,375.0,2136
+"Second Laotian, Phase 2",Thailand,2,1970,1973,7,2,-9.0,2136
+"Second Laotian, Phase 2",Laos,2,1968,1973,7,2,11250.0,2136
+"Second Laotian, Phase 2",Vietnam,1,1968,1973,7,1,2250.0,2136
+War of Attrition,Egypt,2,1969,1970,6,6,5000.0,1311
+War of Attrition,Israel,1,1969,1970,6,6,368.0,1311
+Football War,Honduras,2,1969,1969,1,2,1200.0,1075
+Football War,El Salvador,1,1969,1969,1,1,700.0,1075
+Communist Coalition,Vietnam,1,1970,1971,7,4,400.0,1313
+Communist Coalition,United States of America,2,1970,1971,7,4,125.0,1313
+Communist Coalition,Cambodia,2,1970,1971,7,4,5000.0,1313
+Communist Coalition,South Vietnam,2,1970,1971,7,4,1000.0,1313
+Bangladesh,India,1,1971,1971,7,1,3241.0,1116
+Bangladesh,Pakistan,2,1971,1971,7,2,7982.0,1116
+Yom Kippur War,Egypt,2,1973,1973,6,2,7700.0,1095
+Yom Kippur War,Saudi Arabia,2,1973,1973,6,2,100.0,1095
+Yom Kippur War,Israel,1,1973,1973,6,1,2838.0,1095
+Yom Kippur War,Jordan,2,1973,1973,6,2,23.0,1095
+Yom Kippur War,Syria,2,1973,1973,6,2,3500.0,1095
+Yom Kippur War,Iraq,2,1973,1973,6,2,278.0,1095
+Turco-Cypriot,Turkey,1,1974,1974,2,1,1000.0,1074
+Turco-Cypriot,Cyprus,2,1974,1974,2,2,500.0,1074
+War over Angola,Cuba,1,1975,1976,4,4,1500.0,1286
+War over Angola,South Africa,2,1975,1976,4,4,100.0,1286
+War over Angola,Democratic Republic of the Congo,2,1975,1976,4,4,100.0,1286
+War over Angola,Angola,1,1975,1976,4,4,1000.0,1286
+"Second Ogaden War, Phase 2",Ethiopia,1,1977,1978,4,4,1800.0,1340
+"Second Ogaden War, Phase 2",Cuba,1,1977,1978,4,4,700.0,1340
+"Second Ogaden War, Phase 2",Somalia,2,1977,1978,4,4,8000.0,1340
+Vietnamese-Cambodian,Vietnam,1,1977,1979,7,4,3000.0,1577
+Vietnamese-Cambodian,Cambodia,2,1977,1979,7,4,5000.0,1577
+Ugandian-Tanzanian,Uganda,2,1978,1979,4,2,1500.0,1386
+Ugandian-Tanzanian,Tanzania,1,1978,1979,4,1,1000.0,1386
+Ugandian-Tanzanian,Libya,2,1979,1979,4,2,500.0,1386
+Sino-Vietnamese Punitive,China,1,1979,1979,7,1,13000.0,1178
+Sino-Vietnamese Punitive,Vietnam,2,1979,1979,7,2,8000.0,1178
+Iran-Iraq,Iraq,2,1980,1988,6,6,500000.0,3977
+Iran-Iraq,Iran,1,1980,1988,6,6,750000.0,3977
+Falkland Islands,United Kingdom,1,1982,1982,1,1,255.0,1300
+Falkland Islands,Argentina,2,1982,1982,1,2,746.0,1300
+War over Lebanon,Israel,1,1982,1982,6,6,455.0,1300
+War over Lebanon,Syria,2,1982,1982,6,6,1200.0,1300
+War over the Aouzou Strip,Chad,1,1986,1987,18,1,1000.0,2114
+War over the Aouzou Strip,Libya,2,1986,1987,18,2,7000.0,2114
+Sino-Vietnamese Border War,Vietnam,2,1987,1987,7,6,2200.0,1828
+Sino-Vietnamese Border War,China,1,1987,1987,7,6,1800.0,1828
+Gulf War,Kuwait,1,1990,1991,6,1,1000.0,2347
+Gulf War,United States of America,1,1991,1991,6,1,376.0,2347
+Gulf War,Canada,1,1991,1991,6,1,0.0,2347
+Gulf War,United Kingdom,1,1991,1991,6,1,24.0,2347
+Gulf War,Italy,1,1991,1991,6,1,0.0,2347
+Gulf War,Morocco,1,1991,1991,6,1,0.0,2347
+Gulf War,Iraq,2,1990,1991,6,2,40000.0,2347
+Gulf War,Egypt,1,1991,1991,6,1,14.0,2347
+Gulf War,Oman,1,1991,1991,6,1,0.0,2347
+Gulf War,France,1,1991,1991,6,1,2.0,2347
+Gulf War,United Arab Emirates,1,1991,1991,6,1,6.0,2347
+Gulf War,Qatar,1,1991,1991,6,1,0.0,2347
+Gulf War,Saudi Arabia,1,1991,1991,6,1,44.0,2347
+Gulf War,Syria,1,1991,1991,6,1,0.0,2347
+Bosnian Independence,Croatia,1,1992,1992,2,4,500.0,2034
+Bosnian Independence,Bosnia,1,1992,1992,2,4,2850.0,2034
+Bosnian Independence,Yugoslavia,2,1992,1992,2,4,1890.0,2034
+Azeri-Armenian,Azerbaijan,2,1993,1994,2,2,8500.0,2608
+Azeri-Armenian,Armenia,1,1993,1994,2,1,5500.0,2608
+Cenepa Valley,Ecuador,2,1995,1995,1,3,550.0,2410
+Cenepa Valley,Peru,1,1995,1995,1,3,950.0,2410
+Badme Border,Eritrea,1,1998,2000,4,6,50000.0,4220
+Badme Border,Ethiopia,2,1998,2000,4,6,70000.0,4220
+War for Kosovo,Turkey,1,1999,1999,2,1,0.0,2942
+War for Kosovo,Italy,1,1999,1999,2,1,0.0,2942
+War for Kosovo,United Kingdom,1,1999,1999,2,1,0.0,2942
+War for Kosovo,United States of America,1,1999,1999,2,1,2.0,2942
+War for Kosovo,Netherlands,1,1999,1999,2,1,0.0,2942
+War for Kosovo,France,1,1999,1999,2,1,0.0,2942
+War for Kosovo,Yugoslavia,2,1999,1999,2,2,5000.0,2942
+War for Kosovo,Germany,1,1999,1999,2,1,0.0,2942
+Kargil War,India,1,1999,1999,7,1,474.0,2942
+Kargil War,Pakistan,2,1999,1999,7,2,698.0,2942
+Invasion of Afghanistan,Canada,1,2001,2001,7,4,0.0,3426
+Invasion of Afghanistan,France,1,2001,2001,7,4,0.0,3426
+Invasion of Afghanistan,United Kingdom,1,2001,2001,7,4,0.0,3426
+Invasion of Afghanistan,United States of America,1,2001,2001,7,4,2.0,3426
+Invasion of Afghanistan,Australia,1,2001,2001,7,4,0.0,3426
+Invasion of Afghanistan,Afghanistan,2,2001,2001,7,4,4000.0,3426
+Invasion of Iraq,Australia,1,2003,2003,6,4,0.0,3988
+Invasion of Iraq,United Kingdom,1,2003,2003,6,4,33.0,3988
+Invasion of Iraq,United States of America,1,2003,2003,6,4,140.0,3988
+Invasion of Iraq,Iraq,2,2003,2003,6,4,7000.0,3988
+Gaza-Israel conflict,Israel,1,2006,2024,6,0,1700.0,8726
+Gaza-Israel conflict,Palestine,2,2006,2024,6,0,44500.0,8726
+Russo-Georgian War,Russia,1,2008,2008,12,0,70.0,5502
+Russo-Georgian War,South Ossetia,1,2008,2008,12,0,365.0,5502
+Russo-Georgian War,Abkhazia,1,2008,2008,12,0,70.0,5502
+Russo-Georgian War,Georgia,2,2008,2008,12,0,,5502
+First Libyan Civil War,NATO,1,2011,2011,4,0,,3628
+First Libyan Civil War,Qatar,1,2011,2011,4,0,,3628
+First Libyan Civil War,Sweden,1,2011,2011,4,0,,3628
+First Libyan Civil War,United Arab Emirates,1,2011,2011,4,0,,3628
+First Libyan Civil War,Libya,2,2011,2011,4,0,3000.0,3628
+Heglig Crisis,Sudan,1,2012,2012,4,0,1200.0,2483
+Heglig Crisis,South Sudan,2,2012,2012,4,0,280.0,2483
+Cold War,United States of America,1,1947,1991,12,0,0.0,11620
+Cold War,Soviet Union,2,1947,1991,12,0,0.0,11620
