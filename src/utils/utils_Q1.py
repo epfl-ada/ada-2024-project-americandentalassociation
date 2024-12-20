@@ -246,13 +246,9 @@ def inspect_peaks_events(df_movies, df_wars, genre_list, ylim, name, filename):
 
     # fig.show()
     # fig.write_html(f"images/{filename}.html")
-    fig.write_image("pic1.png", engine="orca", width=1600, height=800, scale=6)    
-    img = Image.open("pic1.png")
-    plt.figure(figsize=(16, 8))    
-    plt.imshow(img)
-    plt.axis('off')    
-    plt.show()
-    os.remove("pic1.png")
+    fig.write_image("pic2.png")
+    Image('pic2.png')
+    os.remove("pic2.png")
     # Print the intersected wars for inspection
     print(final_df)
     return final_df
@@ -329,13 +325,9 @@ def plot_proportion_vs_number_wars(genre_df, wars_df, genre_name, year_cut1, yea
 
     # fig.show()
     # fig.write_html(f"images/{filename}.html")
-    fig.write_image("pic2.png", engine="orca", width=1600, height=800, scale=6)    
-    img = Image.open("pic2.png")
-    plt.figure(figsize=(16, 8))    
-    plt.imshow(img)
-    plt.axis('off')    
-    plt.show()
-    os.remove("pic2.png")
+    fig.write_image("pic3.png")
+    Image('pic3.png')
+    os.remove("pic3.png")
 
 def sum_genres_proportions(df_movies, genres):
     '''
@@ -400,13 +392,9 @@ def plot_proportion_vs_battle_deaths(genre_df, bat_deaths_df, genre_name, year_c
 
     # fig.show()
     # fig.write_html(f"images/{filename}.html")
-    fig.write_image("pic3.png", engine="orca", width=1600, height=800, scale=6)    
-    img = Image.open("pic3.png")
-    plt.figure(figsize=(16, 8))    
-    plt.imshow(img)
-    plt.axis('off')    
-    plt.show()
-    os.remove("pic3.png")
+    fig.write_image("pic4.png")
+    Image('pic4.png')
+    os.remove("pic4.png")
 
 def genre_co_occurrence_network_plotly(df_movies, genres, min_weight):
     '''
@@ -503,13 +491,9 @@ def genre_co_occurrence_network_plotly(df_movies, genres, min_weight):
 
     # fig.show()
     # fig.write_html("images/network.html")
-    fig.write_image("pic4.png", engine="orca", width=1600, height=800, scale=6)    
-    img = Image.open("pic4.png")
-    plt.figure(figsize=(16, 8))    
-    plt.imshow(img)
-    plt.axis('off')    
-    plt.show()
-    os.remove("pic4.png")
+    fig.write_image("pic5.png")
+    Image('pic5.png')
+    os.remove("pic5.png")
 
 
 def genre_shifts_analysis(df_movies, war_start_year, war_end_year, name, filename, window=5):
@@ -564,13 +548,9 @@ def genre_shifts_analysis(df_movies, war_start_year, war_end_year, name, filenam
     )
     # fig.show()
     # fig.write_html(f"images/{filename}.html")
-    fig.write_image("pic5.png", engine="orca", width=1600, height=800, scale=6)    
-    img = Image.open("pic5.png")
-    plt.figure(figsize=(16, 8))    
-    plt.imshow(img)
-    plt.axis('off')    
-    plt.show()
-    os.remove("pic5.png")
+    fig.write_image("pic1.png")
+    Image('pic1.png')
+    os.remove("pic1.png")
 
 
 
@@ -657,13 +637,9 @@ def war_analysis(df_movies, init_year, fin_year, war_name):
 
         # fig.show()
         # fig.write_html(f"images/{war_name}_{filename}.html")
-        fig.write_image("pic10.png", engine="orca", width=1600, height=800, scale=6)    
-        img = Image.open("pic10.png")
-        plt.figure(figsize=(16, 8))    
-        plt.imshow(img)
-        plt.axis('off')    
-        plt.show()
-        os.remove("pic10.png")
+        fig.write_image("pic6.png")
+        Image('pic6.png')
+        os.remove("pic6.png")
 
     # Run the function for each group of genres
     stacked_bar_plot_by_genres(
