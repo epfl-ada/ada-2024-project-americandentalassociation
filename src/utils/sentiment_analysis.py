@@ -138,7 +138,7 @@ def extracting_side(wars_df, df):
         (df_war_movies['event'] == "Korean") &
         (df_war_movies['Countries'].apply(lambda loc: any(country in str(loc) for country in korean_bell_side2)))
     ]
-    return wwii_movies_side1, wwii_movies_side2, cold_war_movies_side1, cold_war_movies_side2, korean_war_movies_side1, korean_war_movies_side2, vietnam_war_movies_side1
+    return wwii_movies_side1, wwii_movies_side2, cold_war_movies_side1, cold_war_movies_side2, korean_war_movies_side1, korean_war_movies_side2, vietnam_war_movies_side1, vietnam_war_movies_side2
 
 
 # Extracting entities corresponding to organizations from the NER tags
@@ -181,7 +181,7 @@ def entity_sentiment_analysis(summary, entities, country):
 
 
 # Only keeping relevant countries
-def named_entity_recognition(wars_df, df, lemmatizer, stop_words, df_war_movies):
+def named_entity_recognition(wars_df, wwii_movies_side1, wwii_movies_side2, cold_war_movies_side1, cold_war_movies_side2, lemmatizer, stop_words):
     # Changing the sides
     wwii_bell_side1 = ['United States of America', 'United Kingdom', 'USSR', 'Poland', 'France']
     wwii_bell_side2 = ['Italy', 'Germany', 'Japan']
@@ -208,23 +208,20 @@ def named_entity_recognition(wars_df, df, lemmatizer, stop_words, df_war_movies)
     # Selecting movies 
 
     wwii_movies_side1 = wwii_movies_side1[
-        (df_war_movies['event'] == "World War II") &
-        (df_war_movies['Countries'].apply(lambda loc: any(country in str(loc) for country in wwii_bell_side1)))
+        (wwii_movies_side1['Countries'].apply(lambda loc: any(country in str(loc) for country in wwii_bell_side1)))
     ]
 
-    wwii_movies_side2 = df_war_movies[
-        (df_war_movies['event'] == "World War II") &
-        (df_war_movies['Countries'].apply(lambda loc: any(country in str(loc) for country in wwii_bell_side2)))
+    wwii_movies_side2 = wwii_movies_side2[
+        (wwii_movies_side2['Countries'].apply(lambda loc: any(country in str(loc) for country in wwii_bell_side2)))
     ]
 
-    cold_war_movies_side1 = df_war_movies[
-        (df_war_movies['event'] == "Cold War") &
-        (df_war_movies['Countries'].apply(lambda loc: any(country in str(loc) for country in cold_bell_side1)))
+    cold_war_movies_side1 = cold_war_movies_side1[
+        (cold_war_movies_side1['Countries'].apply(lambda loc: any(country in str(loc) for country in cold_bell_side1)))
     ]
 
-    cold_war_movies_side2 = df_war_movies[
-        (df_war_movies['event'] == "Cold War") &
-        (df_war_movies['Countries'].apply(lambda loc: any(country in str(loc) for country in cold_bell_side2)))
+    cold_war_movies_side2 = cold_war_movies_side2[
+        (cold_war_movies_side2['event'] == "Cold War") &
+        (cold_war_movies_side2['Countries'].apply(lambda loc: any(country in str(loc) for country in cold_bell_side2)))
     ]
 
 
