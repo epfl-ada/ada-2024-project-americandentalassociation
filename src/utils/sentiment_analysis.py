@@ -404,7 +404,7 @@ def extracting_entities(tree):
 
 
 # Defining a function to extract sentiment scores per entity
-def entity_sentiment_analysis(summary, entities, country):¨
+def entity_sentiment_analysis(summary, entities, country):
     '''
     Analyzes the sentiment of sentences related to specific entities in a summary.
     Parameters:
