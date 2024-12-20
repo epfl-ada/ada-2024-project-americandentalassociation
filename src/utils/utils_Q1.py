@@ -5,7 +5,6 @@ import ast
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from src.utils.genres import *
 import warnings
 warnings.simplefilter("ignore")
 from scipy.signal import find_peaks
