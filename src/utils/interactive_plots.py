@@ -422,7 +422,7 @@ def plot_country_piechart(wars, movies, war):
     :param movies: DataFrame containing information about movies
     :param war: Name of the war
     """
-    side_1, side_2 = find_sides(wars[wars.index==war])
+    side_1, side_2 = find_sides(wars[wars.index == war])
 
     if war == "Korean": war = "Korean War"
     if war == "Vietnam War, Phase 2": war = "Vietnam War"
@@ -432,17 +432,29 @@ def plot_country_piechart(wars, movies, war):
     movies_exploded = movies_war.explode('Countries', ignore_index=True)
     movies_exploded = add_side_col(movies_exploded, side_1, side_2)
     movies_exploded["Count"] = np.ones(movies_exploded.shape[0])
-    fig = px.sunburst(movies_exploded, path=['Side', 'Countries'], values="Count")
+
+    # # Define color mapping
+    color_map = {
+        "Side 1": "Indianred",
+        "Side 2": "cornflowerblue"
+    }
+
+    fig = px.sunburst(
+        movies_exploded,
+        path=['Side', 'Countries'],
+        values="Count",
+        color='Side',  # Use 'Side' to assign colors
+        color_discrete_map=color_map  # Apply the custom color map
+    )
     fig.update_layout(
         title=f'Movies about {war} by Country',
         hovermode='x unified'
     )
     # fig.show()
-
+    # fig.write_html(f"sunburst_{war}.html")
     fig.write_image("temp.png", engine="orca", scale=6)
     img = Image.open("temp.png")
     plt.figure(figsize=(16, 12))
     plt.imshow(img, aspect="equal")
     plt.axis('off')
     plt.show()
-    os.remove("temp.png")
