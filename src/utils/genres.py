@@ -4,6 +4,9 @@ import ast
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from statsmodels.tsa.seasonal import seasonal_decompose
+from scipy.stats import pearsonr
+import statsmodels.api as sm
 
 #Plot naming and showing
 def name_plot(ylabel, title):
@@ -120,3 +123,146 @@ def calc_proportion_growth(counts_year1, counts_year2, year1, year2, total_movie
     merged_counts[f'Proportion_Difference'] = merged_counts[f'Proportion_{year2}'] - merged_counts[f'Proportion_{year1}']
     
     return merged_counts.sort_values(by='Proportion_Difference', ascending=False).reset_index(drop=True)
+
+
+# Function to plot top n genres
+def get_top_genres(data, top_n=10):
+    # Format the genres
+    data['Genres'] = data['Genres_IMDb'].str.strip("[]").str.replace("'", "").str.split(",")
+    all_genres = data['Genres'].dropna().apply(lambda x: x if isinstance(x, list) else x.split(','))
+    genres_count = Counter([genre.strip() for genres in all_genres for genre in genres])
+
+    # Sort the genres by count
+    genres = pd.DataFrame.from_dict(genres_count, orient='index').reset_index()
+    genres.columns = ['Genre', 'Count']
+    genres = genres.sort_values(by='Count', ascending=False)
+
+    # Filter by the top n genres
+    genres = genres.head(top_n)
+
+    return genres
+
+# Function to format the search keyword for a given genre
+def format_keyword(genre):
+    if "film" in genre.lower():
+        keyword = genre
+    else:
+        keyword = genre + " movies"
+
+    return keyword.lower()
+
+def seasonal_decomposition(all_trends):
+    genres = all_trends['Genre'].unique()
+    genre_decompositions = {}
+
+    # Perform seasonal decomposition for each genre
+    for genre in genres:
+        genre_data = all_trends[all_trends['Genre'] == genre].set_index('date')['value']
+        
+        # Apply seasonal decomposition
+        decomposition = seasonal_decompose(genre_data, model='additive', period=12)
+        genre_decompositions[genre] = decomposition
+
+    return genre_decompositions
+
+def genres_vs_interest_correlation(movies, all_trends, genres):
+    # Filter movies dataset for the period 2004-2012
+    movies_filtered = movies[(movies['Year'] >= 2004)]
+    movies_filtered = movies_filtered.explode('Genres')
+    movies_filtered.rename(columns={'Genres': 'Genre'}, inplace=True)
+
+    # Count the number of movies released per top genres per year
+    genre_counts = movies_filtered.groupby(['Year', 'Genre']).size().reset_index()
+    genre_counts.columns = ['Year', 'Genre', 'Count']
+
+    # Filter only the top genres
+    genre_counts = genre_counts[genre_counts['Genre'].isin(genres)]
+
+    # Filter trends for the period 2004-2012
+    trends_filtered = all_trends[(all_trends['date'] >= '2004-01-01') & (all_trends['date'] <= '2012-12-31')]
+
+    # Group the trends by year and genre
+    trends_filtered['Year'] = trends_filtered['date'].dt.year
+    trends_grouped = trends_filtered.groupby(['Year', 'Genre'])['value'].mean().reset_index()
+
+    # Merge movie counts with search interest data
+    merged_data = pd.merge(genre_counts, trends_grouped, on=['Year', 'Genre'], how='inner')
+
+    # Compute pearson correlation and p-value
+    results = []
+    for genre in merged_data['Genre'].unique():
+        genre_data = merged_data[merged_data['Genre'] == genre]
+        corr, p_value = pearsonr(genre_data['Count'], genre_data['value'])
+        results.append({'Genre': genre, 'Correlation': corr, 'P-Value': p_value})
+
+    results_df = pd.DataFrame(results)
+    return results_df
+
+def regression_analysis(events_monthly, trends_monthly):
+    genres = trends_monthly['Genre'].unique()
+    event_types = events_monthly['event_type'].unique()
+
+    # Prepare to collect regression results for plotting
+    regression_results = []
+
+    # Set up the plot grid
+    num_genres = len(genres)
+    num_event_types = len(event_types)
+    fig, axes = plt.subplots(num_genres, num_event_types, figsize=(15, num_genres * 4), sharex=False, sharey=False)
+    axes = axes.flatten()
+
+    plot_index = 0
+    for genre in genres:
+        genre_data = trends_monthly[trends_monthly['Genre'] == genre]
+        
+        for event_type in event_types:
+            # Event type data
+            event_data = events_monthly[events_monthly['event_type'] == event_type]
+            
+            # Merge monthly data
+            merged_data = pd.merge(genre_data, event_data, on='Month', how='outer').fillna(0)
+            
+            # Regression Analysis
+            X = merged_data['event_count']
+            y = merged_data['value']
+            X_with_const = sm.add_constant(X)
+            
+            model = sm.OLS(y, X_with_const).fit()
+            slope = model.params['event_count']
+            p_value = model.pvalues['event_count']
+            r_squared = model.rsquared
+            
+            # Store results for further analysis
+            regression_results.append([event_type, genre, slope, p_value, r_squared])
+
+            # Only plot more significant correlations
+            if p_value > 0.05:
+                continue
+            
+            # Scatterplot
+            ax = axes[plot_index]
+            ax.scatter(X, y, alpha=0.7)
+            
+            # Plot regression line
+            line_x = np.linspace(X.min(), X.max(), 100)
+            line_y = slope * line_x + model.params['const']
+            ax.plot(line_x, line_y, color='red', label=f"y = {slope:.3f}x + {model.params['const']:.3f}\nR²: {r_squared:.3f}\nP-value: {p_value:.3f}")
+            
+            ax.set_title(f"{event_type} on {genre} movies", fontsize=10)
+            ax.set_xlabel("Event Count")
+            ax.set_ylabel("Search Interest")
+            ax.legend()
+            
+            plot_index += 1
+
+    # Remove empty subplots
+    for i in range(plot_index, len(axes)):
+        fig.delaxes(axes[i])
+
+    plt.tight_layout()
+    plt.suptitle("Impact of Events on Movie Genre Interest (Monthly, 2004-2023)", y=1.01, fontsize=16)
+    plt.show()
+
+    regression_df = pd.DataFrame(regression_results, columns=['event_type', 'genre', 'slope', 'p_value', 'r_squared'])
+    return regression_df
+    

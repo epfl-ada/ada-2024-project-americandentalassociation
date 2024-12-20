@@ -6,6 +6,7 @@ import json
 from dotenv import load_dotenv
 import os
 import time
+from src.utils.genres import format_keyword
 
 # Fetch data by defining a query and date range
 def fetch_trend_data(query, date_from, date_to, max_retries=5, timeout=100):
@@ -73,10 +74,8 @@ def query_interest_around_date(query, date):
     if result is None:
         return None
 
-    print(result["interest_over_time"][0]["items"])
     # Convert to DataFrame and structurize
     df = pd.DataFrame(result["interest_over_time"][0]["items"])
-    print(df.head())
     df["keyword"] = result["interest_over_time"][0]["keyword"]
     df["date"] = pd.to_datetime(df["time"], format="%b %d, %Y")
 
@@ -119,3 +118,67 @@ def plot_interest_time_series(df, keyword, highlight_date=None, highlight_name=N
         plt.legend()
 
     plt.show()
+
+# Fetch historical interest for a list of genres
+def fetch_historical_interest_for_genres(genres):
+    # Define the genres to search for
+    genres['Keyword'] = genres['Genre'].apply(format_keyword)
+
+    # Construct the relative path to the data file
+    base_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+    file_path = os.path.join(base_dir, 'data', 'genre_trends.csv')
+    
+    if pd.read_csv(file_path).empty:
+        trends = []
+        for _, genre in genres.iterrows():
+            print(f"Fetching historical search interest for: {genre['Keyword']}")
+            trend = query_full_interest(genre["Keyword"])
+            trend["Genre"] = genre["Genre"]
+            trends.append(trend)
+        all_trends = pd.concat(trends)
+        all_trends.to_csv('data/genre_trends.csv', index=False)
+    
+    all_trends = pd.read_csv(file_path)
+    all_trends['date'] = pd.to_datetime(all_trends['date'])
+    return all_trends
+
+def get_events_trends_monthly(events, all_trends):
+    # Filter events for the period 2004-2023
+    events['date'] = pd.to_datetime(events['date'])
+    events_filtered = events[(events['date'] >= '2004-01-01') & (events['date'] <= '2023-12-31')]
+    events_filtered['Month'] = events_filtered['date'].dt.to_period('M').astype(str)
+
+    # Filter trends for the period 2004-2023
+    all_trends['date'] = pd.to_datetime(all_trends['date'])
+    trends_filtered = all_trends[(all_trends['date'] >= '2004-01-01') & (all_trends['date'] <= '2023-12-31')]
+    trends_filtered['Month'] = trends_filtered['date'].dt.to_period('M').astype(str)
+
+    # Generate a range of months
+    all_months = pd.date_range(start="2004-01-01", end="2023-12-31", freq='MS').strftime('%Y-%m').astype(str).tolist()
+
+    # List all unique event types
+    all_event_types = events_filtered['event_type'].unique()
+
+    # Create all combinations
+    all_combinations = pd.DataFrame([(month, event) for month in all_months for event in all_event_types], columns=['Month', 'event_type'])
+
+    # Group actual data
+    events_grouped = events_filtered.groupby(['Month', 'event_type']).size().reset_index(name='Count')
+
+    # Merge with all combinations to include missing months and event types
+    events_grouped = all_combinations.merge(events_grouped, on=['Month', 'event_type'], how='left')
+    events_grouped['Count'] = events_grouped['Count'].fillna(0)
+
+    # event_types = events_grouped['event_type'].unique()
+
+    # trends_grouped = trends_filtered.groupby(['Month', 'Genre'])['value'].mean().reset_index()
+
+
+    # Aggregate counts of events by type per month
+    events_monthly = events_filtered.groupby(['Month', 'event_type']).size().reset_index(name='event_count')
+
+    # Aggregate search interest by genre per month
+    trends_monthly = trends_filtered.groupby(['Month', 'Genre'])['value'].sum().reset_index()
+
+    return events_monthly, trends_monthly
+    
