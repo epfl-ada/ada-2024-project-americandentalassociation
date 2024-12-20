@@ -3,17 +3,19 @@ import plotly.express as px
 import warnings
 import re
 import nltk
+import numpy as np
 from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk import ne_chunk
 from nltk.sentiment import SentimentIntensityAnalyzer
-from src.utils import google_trends as gt
 warnings.simplefilter("ignore")
 from ast import literal_eval
 import plotly.graph_objects as go 
+from plotly.subplots import make_subplots
 import seaborn as sns
 import matplotlib.pyplot as plt
+from scipy import stats
 
 
 # Defining the function that detects specific keywords related to conflicts 
@@ -160,6 +162,227 @@ def extracting_side(wars_df, df):
     ]
     return wwii_movies_side1, wwii_movies_side2, cold_war_movies_side1, cold_war_movies_side2, korean_war_movies_side1, korean_war_movies_side2, vietnam_war_movies_side1, vietnam_war_movies_side2
 
+def preprocess_summaries(df, stop_words, column_name="summary"):
+    '''
+    This function extracts summaries from a DataFrame,
+    tokenizes them, cleans and filters stop words.
+    
+    Parameters
+    ----------
+    df : pandas.DataFrame 
+        The DataFrame containing a column of summaries.
+    stop_words : set or list
+        Words to ignore in the text.
+    column_name : str, optional
+        Name of the column containing the summaries. Default is 'summary'.
+    
+    Returns
+    -------
+    processed_docs : list of list of str
+        A list of documents, each document being a list of filtered tokens.
+    '''
+    
+    synopses = df[column_name].tolist()
+    processed_docs = []
+    for synopsis in synopses:
+        tokens = word_tokenize(synopsis.lower())
+        filtered_tokens = [
+            word for word in tokens
+            if word.isalnum() and word not in stop_words
+        ]
+        processed_docs.append(filtered_tokens)
+        
+    return processed_docs
+    
+def conduct_sentiment_analysis(processed_docs, original_df):
+    """
+    Conduct sentiment analysis on processed documents and merge the results 
+    into the provided DataFrame.
+
+    Parameters
+    ----------
+    processed_docs : list of list of str
+        A list of tokenized and preprocessed documents.
+    original_df : pd.DataFrame
+        The original DataFrame that corresponds to these documents. 
+        It should have the same length as processed_docs.
+
+    Returns
+    -------
+    pd.DataFrame
+        A new DataFrame that includes the original data plus 
+        the sentiment scores ('neg', 'neu', 'pos', 'compound').
+    """
+    analyzer = SentimentIntensityAnalyzer()
+    sentiment_scores = []
+
+    # Analyze sentiment for each document
+    for tokens in processed_docs:
+        text = ' '.join(tokens)
+        score = analyzer.polarity_scores(text)
+        sentiment_scores.append(score)
+
+    # Convert sentiment scores to DataFrame
+    sentiment_df = pd.DataFrame(sentiment_scores)
+    
+    return sentiment_df
+    
+def calculate_confidence_intervals(sentiment_df, confidence=0.95):
+    results = []
+    
+    for column in ['neg', 'neu', 'pos', 'compound']:
+        data = sentiment_df[column]
+        mean = np.mean(data)
+        std_err = stats.sem(data)
+        ci = stats.t.interval(confidence, len(data)-1, mean, std_err)
+        
+        results.append({
+            'mesure': column,
+            'moyenne': mean,
+            'ci_lower': ci[0],
+            'ci_upper': ci[1]
+        })
+    
+    return pd.DataFrame(results)
+    
+def perform_t_tests(df1, df2):
+    """
+    Perform independent t-tests to compare sentiment scores between two DataFrames.
+    """
+    results = []
+    
+    for column in ['neg', 'neu', 'pos', 'compound']:
+        t_stat, p_value = stats.ttest_ind(df1[column], df2[column], equal_var=False)
+        results.append({
+            'measure': column,
+            't_statistic': t_stat,
+            'p_value': p_value,
+            'significant': p_value < 0.05  # True if p-value is less than 0.05
+        })
+    
+    return pd.DataFrame(results)
+
+def create_global_sentiment_figure(
+    mean_scores_1, mean_scores_2, mean_scores_3, mean_scores_4,
+    ci_wwii_side1, ci_wwii_side2, ci_cold_side1, ci_cold_side2,
+    sentiment_df_1, sentiment_df_2, sentiment_df_3, sentiment_df_4
+):
+    # Create a figure with subplots
+    fig = make_subplots(
+        rows=2, cols=2,
+        subplot_titles=(
+            "Scores for WWII",
+            "Scores for Cold War",
+            "Distribution for WWII",
+            "Distribution for Cold War"
+        ),
+        vertical_spacing=0.13
+    )
+
+    # Graph 1: bars for WWII
+    fig.add_trace(
+        go.Bar(
+            x=['Negative', 'Neutral', 'Positive', 'Compound'],
+            y=mean_scores_1,
+            name='WWII Side 1',
+            error_y=dict(
+                type='data',
+                symmetric=False,
+                array=ci_wwii_side1['ci_upper'].values - mean_scores_1,
+                arrayminus=mean_scores_1 - ci_wwii_side1['ci_lower'].values
+            ),
+            marker_color='blue',
+            opacity=0.7
+        ),
+        row=1, col=1
+    )
+
+    fig.add_trace(
+        go.Bar(
+            x=['Negative', 'Neutral', 'Positive', 'Compound'],
+            y=mean_scores_2,
+            name='WWII Side 2',
+            error_y=dict(
+                type='data',
+                symmetric=False,
+                array=ci_wwii_side2['ci_upper'].values - mean_scores_2,
+                arrayminus=mean_scores_2 - ci_wwii_side2['ci_lower'].values
+            ),
+            marker_color='orange',
+            opacity=0.7
+        ),
+        row=1, col=1
+    )
+
+    # Graph 2: bars for the Cold War
+    fig.add_trace(
+        go.Bar(
+            x=['Negative', 'Neutral', 'Positive', 'Compound'],
+            y=mean_scores_3,
+            name='Cold War Side 1',
+            error_y=dict(
+                type='data',
+                symmetric=False,
+                array=ci_cold_side1['ci_upper'].values - mean_scores_3,
+                arrayminus=mean_scores_3 - ci_cold_side1['ci_lower'].values
+            ),
+            marker_color='green',
+            opacity=0.7
+        ),
+        row=1, col=2
+    )
+
+    fig.add_trace(
+        go.Bar(
+            x=['Negative', 'Neutral', 'Positive', 'Compound'],
+            y=mean_scores_4,
+            name='Cold War Side 2',
+            error_y=dict(
+                type='data',
+                symmetric=False,
+                array=ci_cold_side2['ci_upper'].values - mean_scores_4,
+                arrayminus=mean_scores_4 - ci_cold_side2['ci_lower'].values
+            ),
+            marker_color='purple',
+            opacity=0.7
+        ),
+        row=1, col=2
+    )
+
+    # Graph 3: distribution for WWII
+    fig.add_trace(
+        go.Box(
+            x=['WWII Side 1'] * len(sentiment_df_1['compound']) + ['WWII Side 2'] * len(sentiment_df_2['compound']),
+            y=np.concatenate([sentiment_df_1['compound'], sentiment_df_2['compound']]),
+            name='WWII Distribution',
+            marker=dict(opacity=0.6)
+        ),
+        row=2, col=1
+    )
+
+    # Graph 4: distribution for the Cold War
+    fig.add_trace(
+        go.Box(
+            x=['Cold Side 1'] * len(sentiment_df_3['compound']) + ['Cold Side 2'] * len(sentiment_df_4['compound']),
+            y=np.concatenate([sentiment_df_3['compound'], sentiment_df_4['compound']]),
+            name='Cold War Distribution',
+            marker=dict(opacity=0.6)
+        ),
+        row=2, col=2
+    )
+
+    # Global layout configuration
+    fig.update_layout(
+        title_text="Sentiment Analysis Comparison for WWII and Cold War",
+        height=700,
+        showlegend=True,
+        autosize=True
+    )
+
+    fig.update_yaxes(range=[-1.1, 1.0], row=1, col=1)
+    fig.update_yaxes(range=[-1.1, 1.0], row=1, col=2)
+
+    return fig
 
 # Extracting entities corresponding to organizations from the NER tags
 def extracting_entities(tree):
