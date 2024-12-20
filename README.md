@@ -31,7 +31,6 @@ Questions explored include whether global crises lead to shifts toward various g
 
 ## Data Preparation & Cleaning
 - Wikipedia Timeline was scraped directly from Wikipedia’s website. After cleaning, each entry contained data and a short description of an event. Event types were then added using a pre-trained NLI-based zero-shot text classifier (classes: war, catastrophe, political instability, political resolution, science, technological advancement, natural disaster, pandemics). Positive events were removed to better focus on defined research questions.  
-  *Note*: The initial exploratory analysis in this milestone was carried out by including events not necessarily in this list. In Milestone 3, only events from this extensive dataset will be used.
 - Google Search Trends is not a unique dataset that can be fetched statically. Therefore, a special API from Oxylabs was used to define utility functions for fetching time series for each chosen keyword and timeline. This utility will then be used in Milestone 3 to fetch structured and clean data for our events and dates of interest.
 - We also applied text cleaning techniques such as stopword removal, character folding, tokenization, and lemmatization to the movies synopses directly in the `results.ipynb` file as it was a relatively light data cleaning step. 
 
