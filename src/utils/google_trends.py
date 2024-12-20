@@ -13,8 +13,8 @@ def fetch_trend_data(query, date_from, date_to, max_retries=5, timeout=100):
     load_dotenv()
 
     # Retrieve credentials
-    USERNAME = os.getenv("USERNAME")
-    PASSWORD = os.getenv("PASSWORD")
+    USERNAME = "ada_project_Mnuql"
+    PASSWORD = "AdvancedDataAnalysis_2024"
     URL = "https://realtime.oxylabs.io/v1/queries"
 
     payload = {
