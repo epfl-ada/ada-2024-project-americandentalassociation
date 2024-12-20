@@ -178,3 +178,5 @@ xlrd==2.0.1
 xxhash==2.0.2
 xyzservices==2022.9.0
 yarl==1.18.0
+statsmodels==0.14.4
+beautifulsoup4==4.12.3

@@ -1,0 +1,139 @@
+,WarName,Side,StartYear,EndYear,StateName,BatDeath
+2,Arab-Israeli,1,1948,1948,['Israel'],3000
+3,Arab-Israeli,2,1948,1948,"['Egypt', 'Syria', 'Lebanon', 'Jordan', 'Iraq']",5000
+4,Assam,1,1962,1962,['China (PRC)'],500
+5,Assam,2,1962,1962,['India'],1353
+8,Azeri-Armenian,1,1993,1994,['Armenia'],5500
+9,Azeri-Armenian,2,1993,1994,['Azerbaijan'],8500
+10,Badme Border,1,1998,2000,['Eritrea'],50000
+11,Badme Border,2,1998,2000,['Ethiopia'],70000
+12,Bangladesh,1,1971,1971,['India'],3241
+13,Bangladesh,2,1971,1971,['Pakistan'],7982
+14,Bosnian Independence,1,1992,1992,"['Croatia', 'Bosnia']",3350
+15,Bosnian Independence,2,1992,1992,['Yugoslavia'],1890
+16,Boxer Rebellion,1,1900,1900,"['Russia', 'Japan', 'United States of America', 'United Kingdom', 'France']",1003
+17,Boxer Rebellion,2,1900,1900,['China'],2000
+18,Cenepa Valley,1,1995,1995,['Peru'],950
+19,Cenepa Valley,2,1995,1995,['Ecuador'],550
+20,Chaco,1,1932,1935,['Paraguay'],36000
+21,Chaco,2,1932,1935,['Bolivia'],56661
+22,Changkufeng,1,1938,1938,['Japan'],526
+23,Changkufeng,2,1938,1938,['USSR'],1200
+24,Communist Coalition,1,1970,1971,['Vietnam'],400
+25,Communist Coalition,2,1970,1971,"['United States of America', 'Cambodia', 'South Vietnam']",6125
+28,Conquest of Ethiopia,1,1935,1936,['Italy'],4000
+29,Conquest of Ethiopia,2,1935,1936,['Ethiopia'],16000
+34,Estonian Liberation,1,1918,1920,"['Estonia', 'Finland']",3750
+35,Estonian Liberation,2,1918,1920,['Russia'],8000
+36,Falkland Islands,1,1982,1982,['United Kingdom'],255
+37,Falkland Islands,2,1982,1982,['Argentina'],746
+38,First Balkan,1,1912,1913,"['Greece', 'Bulgaria', 'Yugoslavia']",52000
+39,First Balkan,2,1912,1913,['Turkey'],30000
+42,First Kashmir,1,1947,1949,['India'],2500
+43,First Kashmir,2,1947,1949,['Pakistan'],1000
+48,First Sino-Japanese,1,1894,1895,['Japan'],5000
+49,First Sino-Japanese,2,1894,1895,['China'],10000
+52,Football War,1,1969,1969,['El Salvador'],700
+53,Football War,2,1969,1969,['Honduras'],1200
+54,Fourth Central American,1,1907,1907,['Nicaragua'],400
+55,Fourth Central American,2,1907,1907,"['El Salvador', 'Honduras']",600
+62,Franco-Thai,1,1940,1941,['Thailand'],700
+63,Franco-Thai,2,1940,1941,['France'],700
+64,Franco-Turkish,1,1919,1921,['France'],5000
+65,Franco-Turkish,2,1919,1921,['Turkey'],35000
+66,Greco-Turkish,1,1897,1897,['Turkey'],1400
+67,Greco-Turkish,2,1897,1897,['Greece'],600
+68,Gulf War,1,1990,1991,"['Kuwait', 'United States of America', 'Canada', 'United Kingdom', 'Italy', 'Morocco', 'Egypt', 'Oman', 'France', 'United Arab Emirates', 'Qatar', 'Saudi Arabia', 'Syria']",1466
+69,Gulf War,2,1990,1991,['Iraq'],40000
+70,Hungarian Adversaries,1,1919,1919,"['Czechoslovakia', 'Romania']",5000
+71,Hungarian Adversaries,2,1919,1919,['Hungary'],6000
+72,IfniWar,1,1957,1958,"['France', 'Spain']",122
+73,IfniWar,2,1957,1958,['Morocco'],1000
+74,Invasion of Afghanistan,1,2001,2001,"['Canada', 'France', 'United Kingdom', 'United States of America', 'Australia']",2
+75,Invasion of Afghanistan,2,2001,2001,['Afghanistan'],4000
+76,Invasion of Iraq,1,2003,2003,"['Australia', 'United Kingdom', 'United States of America']",173
+77,Invasion of Iraq,2,2003,2003,['Iraq'],7000
+78,Iran-Iraq,1,1980,1988,['Iran'],750000
+79,Iran-Iraq,2,1980,1988,['Iraq'],500000
+84,Italian-Turkish,1,1911,1912,['Italy'],6000
+85,Italian-Turkish,2,1911,1912,['Turkey'],14000
+86,Kargil War,1,1999,1999,['India'],474
+87,Kargil War,2,1999,1999,['Pakistan'],698
+88,Korean,1,1950,1953,"['Belgium', 'Canada', 'Colombia', 'United Kingdom', 'Netherlands', 'Greece', 'France', 'Turkey', 'Philippines', 'Thailand', 'Ethiopia', 'Australia', 'South Korea', 'United States of America']",170893
+89,Korean,2,1950,1953,"['China', 'North Korea']",739191
+92,Latvian Liberation,1,1918,1920,"['Germany', 'Estonia', 'Latvia']",4496
+93,Latvian Liberation,2,1918,1920,"['Russia', 'Germany']",8750
+94,Lithuanian-Polish,1,1920,1920,['Poland'],500
+95,Lithuanian-Polish,2,1920,1920,['Lithuania'],500
+98,Manchurian,1,1929,1929,['USSR'],200
+99,Manchurian,2,1929,1929,['China'],3000
+106,Nomonhan,1,1939,1939,"['USSR', 'Mongolia']",8000
+107,Nomonhan,2,1939,1939,['Japan'],20000
+108,Off-shore Islands,1,1954,1955,['China'],1003
+109,Off-shore Islands,2,1954,1955,['Taiwan'],1367
+112,Russo-Finnish,1,1939,1940,['USSR'],126875
+113,Russo-Finnish,2,1939,1940,['Finland'],24923
+114,Russo-Japanese,1,1904,1905,['Japan'],80378
+115,Russo-Japanese,2,1904,1905,['Russia'],71453
+116,Russo-Polish,1,1919,1920,['Poland'],40000
+117,Russo-Polish,2,1919,1920,['Russia'],60000
+118,Saudi-Yemeni,1,1934,1934,['Saudi Arabia'],100
+119,Saudi-Yemeni,2,1934,1934,['Yemen Arab Republic'],2000
+120,Second Balkan,1,1913,1913,"['Turkey', 'Yugoslavia', 'Greece', 'Romania']",42500
+121,Second Balkan,2,1913,1913,['Bulgaria'],18000
+124,Second Greco-Turkish,1,1919,1922,['Turkey'],20000
+125,Second Greco-Turkish,2,1919,1922,['Greece'],30000
+126,Second Kashmir,1,1965,1965,['Pakistan'],3800
+127,Second Kashmir,2,1965,1965,['India'],3261
+128,"Second Laotian, Phase 2",1,1968,1973,['Vietnam'],2250
+129,"Second Laotian, Phase 2",2,1968,1973,"['United States of America', 'Thailand', 'Laos']",11616
+130,"Second Ogaden War, Phase 2",1,1977,1978,"['Ethiopia', 'Cuba']",2500
+131,"Second Ogaden War, Phase 2",2,1977,1978,['Somalia'],8000
+136,Second Sino-Japanese,1,1931,1933,['Japan'],10000
+137,Second Sino-Japanese,2,1931,1933,['China'],50000
+138,Second Spanish-Moroccan,1,1909,1910,['Spain'],2000
+139,Second Spanish-Moroccan,2,1909,1910,['Morocco'],8000
+142,Sinai War,1,1956,1956,"['France', 'Israel', 'United Kingdom']",221
+143,Sinai War,2,1956,1956,['Egypt'],3000
+146,Sino-Russian,1,1900,1900,['Russia'],242
+147,Sino-Russian,2,1900,1900,['China'],3758
+148,Sino-Vietnamese Border War,1,1987,1987,['China'],1800
+149,Sino-Vietnamese Border War,2,1987,1987,['Vietnam'],2200
+150,Sino-Vietnamese Punitive,1,1979,1979,['China'],13000
+151,Sino-Vietnamese Punitive,2,1979,1979,['Vietnam'],8000
+152,Six Day War,1,1967,1967,['Israel'],1000
+153,Six Day War,2,1967,1967,"['Egypt', 'Jordan', 'Syria']",18600
+154,Soviet Invasion of Hungary,1,1956,1956,['USSR'],1500
+155,Soviet Invasion of Hungary,2,1956,1956,['Hungary'],926
+156,Spanish-American,1,1898,1898,['United States of America'],2910
+157,Spanish-American,2,1898,1898,['Spain'],775
+158,Taiwan Straits,1,1958,1958,['China (PRC)'],300
+159,Taiwan Straits,2,1958,1958,['Taiwan (ROC)'],1500
+160,Third Central American,1,1906,1906,['Guatemala'],400
+161,Third Central American,2,1906,1906,"['Honduras', 'El Salvador']",600
+162,Third Sino-Japanese,1,1937,1941,['Japan'],250000
+163,Third Sino-Japanese,2,1937,1941,['China'],750000
+164,Turco-Cypriot,1,1974,1974,['Turkey'],1000
+165,Turco-Cypriot,2,1974,1974,['Cyprus'],500
+166,Ugandian-Tanzanian,1,1978,1979,['Tanzania'],1000
+167,Ugandian-Tanzanian,2,1978,1979,"['Uganda', 'Libya']",2000
+168,"Vietnam War, Phase 2",1,1965,1975,['Vietnam'],700000
+169,"Vietnam War, Phase 2",2,1965,1975,"['United States of America', 'Cambodia', 'South Korea', 'Philippines', 'South Vietnam', 'Thailand', 'Australia']",321442
+170,Vietnamese-Cambodian,1,1977,1979,['Vietnam'],3000
+171,Vietnamese-Cambodian,2,1977,1979,['Cambodia'],5000
+172,War for Kosovo,1,1999,1999,"['Turkey', 'Italy', 'United Kingdom', 'United States of America', 'Netherlands', 'France', 'Germany']",2
+173,War for Kosovo,2,1999,1999,['Yugoslavia'],5000
+174,War of Attrition,1,1969,1970,['Israel'],368
+175,War of Attrition,2,1969,1970,['Egypt'],5000
+178,War over Angola,1,1975,1976,"['Cuba', 'Angola']",2500
+179,War over Angola,2,1975,1976,"['South Africa', 'Democratic Republic of the Congo']",200
+180,War over Lebanon,1,1982,1982,['Israel'],455
+181,War over Lebanon,2,1982,1982,['Syria'],1200
+182,War over the Aouzou Strip,1,1986,1987,['Chad'],1000
+183,War over the Aouzou Strip,2,1986,1987,['Libya'],7000
+184,World War I,1,1914,1918,"['Yugoslavia', 'Russia', 'United Kingdom', 'Japan', 'Portugal', 'Belgium', 'Greece', 'Romania', 'France', 'Italy', 'United States of America']",5191831
+185,World War I,2,1914,1918,"['Bulgaria', 'Turkey', 'Germany', 'Austria-Hungary']",3386200
+186,World War II,1,1939,1945,"['Belgium', 'Yugoslavia', 'Norway', 'Canada', 'United States of America', 'United Kingdom', 'Netherlands', 'Romania', 'Bulgaria', 'Greece', 'Brazil', 'Italy', 'Australia', 'New Zealand', 'USSR', 'Poland', 'France', 'Mongolia', 'China', 'South Africa', 'Ethiopia']",10717907
+187,World War II,2,1939,1945,"['Hungary', 'France', 'Finland', 'Italy', 'Romania', 'Bulgaria', 'Germany', 'Japan']",5917000
+188,Yom Kippur War,1,1973,1973,['Israel'],2838
+189,Yom Kippur War,2,1973,1973,"['Egypt', 'Saudi Arabia', 'Jordan', 'Syria', 'Iraq']",11601
