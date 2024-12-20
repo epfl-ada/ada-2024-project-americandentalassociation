@@ -18,6 +18,18 @@ import matplotlib.pyplot as plt
 
 # Defining the function that detects specific keywords related to conflicts 
 def label_event_regex(summary):
+    '''
+    This function identifies and labels specific events related to conflicts based on keywords in a given summary.
+    Parameters:
+        Summary (str): The text summary to analyze for conflict-related keywords.
+    Output:
+        Str:  The detected conflict type, one of the following:
+            "World War II"
+            "Vietnam War"
+            "Cold War"
+            "Korean"
+            "Other" (if no keywords match)
+    '''
     if re.search(r"(World\sWar\sII|WWII|Hitler|Nazis|Hiroshima|Holocaust)", summary, re.IGNORECASE):
         return "World War II"
     elif re.search(r"(Vietnam\sWar|Viet\sCong|Saigon)", summary, re.IGNORECASE):
@@ -30,6 +42,14 @@ def label_event_regex(summary):
         return "Other"
 
 def extracting_side(wars_df, df):
+    '''
+    This function processes conflict data to identify participating countries on different sides of major conflicts and associates them with relevant war movies.
+    Parameters:
+        wars_df (DataFrame): Contains information about wars, including countries, sides, and outcomes.
+        df (DataFrame): Contains information about movies, including genres, summaries, and countries.
+    Returns:
+        tuple: A tuple of DataFrames, each representing movies associated with a specific side of different conflicts:
+    '''
     #WWII
     wwii_bell = wars_df[wars_df['WarName']=='World War II'][['StateName', 'Side', 'Outcome']]
     wwii_bell_side1 = wwii_bell[wwii_bell['Side'] == 1]['StateName'].values.tolist()
@@ -143,6 +163,13 @@ def extracting_side(wars_df, df):
 
 # Extracting entities corresponding to organizations from the NER tags
 def extracting_entities(tree):
+    '''
+    This function extracts named entities from the tagged entities tree, mainly focused on entities labeled as ‘ORGANIZATION’
+    Parameters:
+        tree (Tree): A syntactic parse tree with labeled subtrees.
+    Returns:
+        list: A list of extracted entity names (strings).
+    '''
     # Initializing the entities 
     entities = []
     for subtree in tree.subtrees():
@@ -154,7 +181,17 @@ def extracting_entities(tree):
 
 
 # Defining a function to extract sentiment scores per entity
-def entity_sentiment_analysis(summary, entities, country):
+def entity_sentiment_analysis(summary, entities, country):¨
+    '''
+    Analyzes the sentiment of sentences related to specific entities in a summary.
+    Parameters:
+        summary (str): A text summary containing the entities.
+        entities (list): A list of entities to analyze.
+        country (str): The country context of the summary.
+    Returns:
+        list: A list of dictionaries
+
+    '''
     analyzer = SentimentIntensityAnalyzer()
 
     # Initialization of the variables used 
@@ -182,6 +219,19 @@ def entity_sentiment_analysis(summary, entities, country):
 
 # Only keeping relevant countries
 def named_entity_recognition(wars_df, wwii_movies_side1, wwii_movies_side2, cold_war_movies_side1, cold_war_movies_side2, lemmatizer, stop_words):
+    '''
+    Processes movie datasets to perform Named Entity Recognition (NER) for conflict-related movies and extract relevant entities.
+    Parameters:
+        wars_df (DataFrame): Dataset containing war information.
+        wwii_movies_side1, wwii_movies_side2, cold_war_movies_side1, cold_war_movies_side2 (DataFrames): Movie datasets for different sides of conflicts.
+        lemmatizer (Lemmatizer): Used to normalize words.
+        stop_words (list): A list of words to exclude from NER.
+    Returns:
+        tuple: Processed movie datasets and additional metadata:
+        wars_iterator: List of DataFrames for movies categorized by conflict and side.
+        war_names: Names of the corresponding conflicts.
+        side_iterator: List of sides for corresponding conflicts.
+    '''
     # Changing the sides
     wwii_bell_side1 = ['United States of America', 'United Kingdom', 'USSR', 'Poland', 'France']
     wwii_bell_side2 = ['Italy', 'Germany', 'Japan']
@@ -297,6 +347,16 @@ def named_entity_recognition(wars_df, wwii_movies_side1, wwii_movies_side2, cold
 
 
 def entity_level_sent_analysis(wars_iterator, war_names, side_iterator):
+    '''
+    Performs entity-level sentiment analysis for movies across different conflicts and visualizes the results using heatmaps.
+    Parameters:
+        wars_iterator (list): DataFrames containing movies categorized by conflict and side.
+        war_names (list): Names of the corresponding conflicts.
+        side_iterator (list): List of countries for corresponding sides.
+    Returns:
+        None. Visualizes sentiment data as heatmaps.
+
+    '''
     # Perform entity-level sentiment analysis on every conflict's subset of movies
     for i, test_sample in enumerate(wars_iterator):
         # Create a new dataframe for analysis
