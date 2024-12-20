@@ -89,7 +89,6 @@ def extracting_side(wars_df, df):
         (df_war_movies['Countries'].apply(lambda loc: any(country in str(loc) for country in wwii_bell_side2)))
     ]
 
-    sample_wwii_movies_side1 = wwii_movies_side1.sample(n=55, random_state=42)
 
 
     # Cold War
@@ -139,11 +138,7 @@ def extracting_side(wars_df, df):
         (df_war_movies['event'] == "Korean") &
         (df_war_movies['Countries'].apply(lambda loc: any(country in str(loc) for country in korean_bell_side2)))
     ]
-    return [wwii_movies_side1, wwii_movies_side2, cold_war_movies_side1, cold_war_movies_side2, korean_war_movies_side1, korean_war_movies_side1, vietnam_war_movies_side1, vietnam_war_movies_side2]
-
-'''# Initialisation de l'analyseur de sentiment
-analyzer = SentimentIntensityAnalyzer()
-'''
+    return wwii_movies_side1, wwii_movies_side2, cold_war_movies_side1, cold_war_movies_side2, korean_war_movies_side1, korean_war_movies_side2, vietnam_war_movies_side1
 
 
 # Extracting entities corresponding to organizations from the NER tags
@@ -186,8 +181,7 @@ def entity_sentiment_analysis(summary, entities, country):
 
 
 # Only keeping relevant countries
-def named_entity_recognition(wars_df, df, lemmatizer, stop_words):
-    df_war_movies = df[df['Genres'].str.contains("War film", case=False, na=False)].reset_index(drop=True)
+def named_entity_recognition(wars_df, df, lemmatizer, stop_words, df_war_movies):
     # Changing the sides
     wwii_bell_side1 = ['United States of America', 'United Kingdom', 'USSR', 'Poland', 'France']
     wwii_bell_side2 = ['Italy', 'Germany', 'Japan']
@@ -213,7 +207,7 @@ def named_entity_recognition(wars_df, df, lemmatizer, stop_words):
 
     # Selecting movies 
 
-    wwii_movies_side1 = df_war_movies[
+    wwii_movies_side1 = wwii_movies_side1[
         (df_war_movies['event'] == "World War II") &
         (df_war_movies['Countries'].apply(lambda loc: any(country in str(loc) for country in wwii_bell_side1)))
     ]
@@ -302,7 +296,7 @@ def named_entity_recognition(wars_df, df, lemmatizer, stop_words):
     war_names = ['World War II Allied Side Before','World War II Allied Side After', "World War II Axis Side", 'Cold War Western Side Before', 'Cold War Western Side After', 'Cold War Sovietic Side Before', 'Cold War Sovietic Side After']# "Cold War", "Korean war", "Vietnan war"]
     side_iterator = [wwii_bell_side1, wwii_bell_side1, wwii_bell_side2, cold_bell_side1, cold_bell_side1, cold_bell_side2, cold_bell_side2]
 
-    return [wars_iterator, war_names, side_iterator]
+    return wars_iterator, war_names, side_iterator
 
 
 def entity_level_sent_analysis(wars_iterator, war_names, side_iterator):
